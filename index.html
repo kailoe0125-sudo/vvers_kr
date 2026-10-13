@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>V_VERS 한국 서비스 오픈 | 오리지널곡 · BGM · 커버곡 어레인지</title>
+<meta name="description" content="V_VERS 한국 서비스 오픈. 오리지널곡 · BGM · 커버곡 어레인지 제작, 원화 견적을 바로 확인하고 문의하세요.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="V_VERS 한국 서비스 오픈 | 오픈 특가 선착순 3팀">
+<meta property="og:description" content="캐릭터의 노래, 이제 한국어로 의뢰하세요. 원화 결제 · 한국어 상담 · 11월 30일까지 오픈 특가.">
+<meta property="og:url" content="https://kailoe0125-sudo.github.io/vvers_kr/">
+<meta property="og:image" content="https://kailoe0125-sudo.github.io/vvers_kr/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="V_VERS 한국 서비스 오픈 | 오픈 특가 선착순 3팀">
+<meta name="twitter:description" content="캐릭터의 노래, 이제 한국어로 의뢰하세요. 원화 결제 · 한국어 상담 · 11월 30일까지 오픈 특가.">
+<meta name="twitter:image" content="https://kailoe0125-sudo.github.io/vvers_kr/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#10121C; --bg2:#191C2A; --bg3:#1B1834; --line:#2A2E42; --line2:#3A3F58;
+  --fg:#ECEDF4; --fg2:#C9CCDC; --mute:#A6AAC0; --dim:#8D91A8;
+  --accent:#9A8CFF; --accent-ink:#14112E; --warn:#FFB38A;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--fg)}
+body{font-family:'IBM Plex Sans KR',system-ui,sans-serif;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere}
+.wrap{max-width:860px;margin:0 auto}
+section{padding:72px 64px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:'Space Grotesk',sans-serif;font-size:14px;letter-spacing:.16em;color:var(--accent);margin:0 0 12px}
+h1{margin:0;font-size:46px;line-height:1.3}
+h2{margin:0 0 20px;font-size:30px;line-height:1.4}
+p{margin:0}
+.lead{color:var(--fg2)}
+.muted{color:var(--mute)}
+.num{font-family:'Space Grotesk',sans-serif}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.card{border:1px solid var(--line2);padding:28px;display:flex;flex-direction:column;gap:8px}
+.card.hl{border-color:var(--accent)}
+.card .price{font-family:'Space Grotesk',sans-serif;font-size:34px;font-weight:700;line-height:1.2}
+.card .price small{font-family:'IBM Plex Sans KR',sans-serif;font-size:18px;font-weight:500}
+.info{background:var(--bg2);padding:22px 28px;display:flex;flex-direction:column;gap:6px;font-size:16px;margin-top:20px}
+.info b{display:inline-block;width:110px;color:var(--mute);font-weight:400}
+.stack{display:flex;flex-direction:column;gap:20px}
+.rows{border-top:1px solid var(--line2)}
+.rows>div{display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid var(--line)}
+.note{font-size:15px;color:var(--mute)}
+/* hero */
+.hero{padding:96px 64px 72px}
+.brand{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:28px}
+.brand .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;letter-spacing:.18em}
+.brand .tag{font-family:'Space Grotesk',sans-serif;font-size:13px;letter-spacing:.14em;color:var(--mute)}
+.bar{height:4px;width:72px;background:var(--accent);margin-bottom:28px}
+.slogan{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:500;color:var(--accent);margin:0 0 14px;letter-spacing:.01em}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0}
+.chips span{border:1px solid var(--line2);padding:7px 14px;font-size:15px}
+.event{background:var(--bg3)}
+.event .card{background:var(--bg);border:0}
+.strike{color:var(--dim);text-decoration:line-through;font-size:18px}
+/* process */
+.steps{display:flex;flex-direction:column;gap:14px}
+.steps>div{display:flex;gap:20px;align-items:baseline}
+.steps .n{font-family:'Space Grotesk',sans-serif;color:var(--accent);width:32px;flex:none}
+/* estimator */
+.tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:24px 0}
+.tab{min-height:48px;border:1px solid var(--line2);background:transparent;color:var(--fg2);font:inherit;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
+.tab .d{font-family:'Space Grotesk',sans-serif;font-size:13px;width:24px;height:24px;border-radius:50%;background:var(--bg2);display:inline-flex;align-items:center;justify-content:center}
+.tab[aria-current="step"]{border-color:var(--accent);color:var(--fg)}
+.tab[aria-current="step"] .d{background:var(--accent);color:var(--accent-ink)}
+.panel{display:none}
+.panel.on{display:block}
+.q{font-size:22px;font-weight:700;margin:0 0 6px}
+.qsub{color:var(--mute);font-size:15px;margin:0 0 20px}
+.group{margin-bottom:28px}
+.group>.label{font-size:14px;font-weight:700;color:var(--mute);margin-bottom:10px}
+.opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.opt{position:relative;display:flex;flex-direction:column;gap:2px;min-height:64px;padding:14px 18px;border:1px solid var(--line2);background:var(--bg2);color:var(--fg);font:inherit;text-align:left;cursor:pointer}
+.opt .t{font-weight:700;font-size:16px}
+.opt .s{font-size:14px;color:var(--mute)}
+.opt .p{font-family:'Space Grotesk',sans-serif;font-size:15px;color:var(--fg2)}
+.opt[aria-pressed="true"]{border-color:var(--accent);background:#211E3D}
+.opt[aria-pressed="true"]::after{content:"";position:absolute;top:14px;right:16px;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.opt:disabled{opacity:.45;cursor:not-allowed}
+.warn{font-size:14px;color:var(--warn);margin-top:10px;min-height:1em}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.field label{font-size:14px;font-weight:700;color:var(--mute)}
+.field input,.field textarea{font:inherit;font-size:16px;color:var(--fg);background:var(--bg2);border:1px solid var(--line2);padding:12px 14px;border-radius:0}
+.field input:focus,.field textarea:focus,.opt:focus-visible,.tab:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:8px}
+.btn{min-height:48px;padding:0 22px;font:inherit;font-size:16px;font-weight:700;cursor:pointer;border:1px solid var(--line2);background:transparent;color:var(--fg)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.summary{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.box{background:var(--bg2);padding:24px}
+.box h3{margin:0 0 14px;font-size:17px;color:var(--accent)}
+.kv{display:flex;flex-direction:column;gap:12px;font-size:15px}
+.kv>div{display:flex;flex-direction:column;border-bottom:1px solid var(--line);padding-bottom:10px}
+.kv span{color:var(--mute);font-size:13px}
+.lines{display:flex;flex-direction:column;gap:8px;font-size:15px}
+.lines>div{display:flex;justify-content:space-between;gap:10px}
+.total{font-family:'Space Grotesk',sans-serif;font-size:38px;font-weight:700;color:var(--accent);line-height:1.2;margin-top:6px}
+.total small{font-family:'IBM Plex Sans KR',sans-serif;font-size:18px;color:var(--fg)}
+.copyout{width:100%;min-height:200px;margin-top:12px;font:inherit;font-size:14px;line-height:1.6;color:var(--fg2);background:var(--bg);border:1px solid var(--line2);padding:12px;resize:vertical}
+.copied{font-size:14px;color:var(--accent);min-height:1.4em;margin-top:8px}
+/* portfolio */
+.pf-tabs{display:inline-flex;border:1px solid var(--line2);margin:4px 0 24px}
+.pf-tab{min-height:46px;min-width:130px;padding:0 22px;font:inherit;font-size:16px;font-weight:700;background:transparent;color:var(--mute);border:0;cursor:pointer}
+.pf-tab[aria-selected="true"]{background:var(--accent);color:var(--accent-ink)}
+.pf-tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.pf-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.pf-grid.single{grid-template-columns:minmax(0,1fr)}
+.pf-item{display:flex;flex-direction:column;gap:10px}
+.pf-media{position:relative;width:100%;aspect-ratio:16/9;background:var(--bg2);overflow:hidden}
+.pf-media iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.pf-play{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;cursor:pointer;background:#0B0C14 center/cover no-repeat}
+.pf-play::after{content:"";position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(16,18,28,.78) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7l9 5-9 5z' fill='%23ECEDF4'/%3E%3C/svg%3E") center/30px no-repeat;border:1px solid rgba(236,237,244,.35)}
+.pf-play:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.pf-empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--dim);font-size:15px;border:1px dashed var(--line2)}
+.pf-title{font-weight:700;font-size:16px;line-height:1.4}
+.pf-sub{font-size:14px;color:var(--mute);margin-top:-6px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin:4px 0 28px}
+.cta a{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;font-weight:700;font-size:16px;text-decoration:none;border:1px solid var(--line2);color:var(--fg)}
+.cta a.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.cta a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.req{color:var(--accent)}
+footer a{color:var(--fg2)}
+footer{padding:48px 64px 64px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+@media (max-width:640px){
+  body{font-size:16px}
+  section,.hero,footer{padding-left:20px;padding-right:20px}
+  section{padding-top:56px;padding-bottom:56px}
+  .hero{padding-top:64px}
+  h1{font-size:32px}
+  h2{font-size:24px}
+  .grid2,.opts,.summary,.pf-grid{grid-template-columns:minmax(0,1fr)}
+  .pf-tabs{display:flex}
+  .pf-tab{flex:1;min-width:0}
+  .tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card .price{font-size:28px}
+  .info b{width:90px}
+  .brand{flex-direction:column;align-items:flex-start;gap:6px}
+  .hero .lead br{display:none}
+  .slogan{font-size:16px}
+}
+
+/* ===== promo theme overrides ===== */
+:root{
+  --bg:#0A0B14; --bg2:#141626; --bg3:#191B30; --line:#24273D; --line2:#33375A;
+  --fg:#F2F1F8; --fg2:#CFCFE0; --mute:#9EA0BC; --dim:#8487A6;
+  --accent:#FF8AC4; --accent2:#7FE3FF; --accent-ink:#1A0C18; --warn:#FFC08A;
+  --grad:linear-gradient(100deg,#FF8AC4 0%,#C9A2FF 50%,#7FE3FF 100%);
+}
+body{font-family:'Pretendard Variable','Pretendard','IBM Plex Sans KR',system-ui,sans-serif;letter-spacing:-.01em}
+.wrap{max-width:1040px}
+section{padding:96px 64px;border-bottom:0}
+h2{font-size:34px;letter-spacing:-.02em}
+.eyebrow{color:var(--accent2);letter-spacing:.22em;font-size:13px}
+.logo{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:.2em;font-size:20px}
+
+/* hero */
+.kv-hero{position:relative;min-height:640px;overflow:hidden;display:flex}
+.kv-art{position:absolute;inset:0;background:url(hero.jpg) 78% 30%/cover no-repeat}
+.kv-shade{position:absolute;inset:0;background:
+  linear-gradient(90deg,rgba(10,11,20,.97) 0%,rgba(10,11,20,.88) 38%,rgba(10,11,20,.35) 68%,rgba(10,11,20,.15) 100%),
+  linear-gradient(0deg,rgba(10,11,20,1) 0%,rgba(10,11,20,0) 30%)}
+.kv-inner{position:relative;flex:1;display:flex;flex-direction:column;justify-content:space-between;padding:40px 64px 72px}
+.kv-top{display:flex;justify-content:space-between;align-items:center}
+.kv-home{color:var(--fg2);text-decoration:none;font-size:14px;border:1px solid rgba(255,255,255,.18);padding:8px 14px;border-radius:999px;backdrop-filter:blur(6px)}
+.kv-copy{max-width:560px;display:flex;flex-direction:column;gap:20px}
+.badge{align-self:flex-start;font-size:14px;font-weight:700;letter-spacing:.04em;padding:8px 16px;border-radius:999px;color:#fff;background:linear-gradient(100deg,rgba(255,138,196,.22),rgba(127,227,255,.22));border:1px solid rgba(255,255,255,.22)}
+.kv-hero h1{font-size:54px;line-height:1.22;font-weight:800;letter-spacing:-.03em}
+.kv-hero h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.kv-sub{font-size:18px;color:var(--fg2)}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 0}
+.cta a{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;font-weight:700;font-size:16px;text-decoration:none;border-radius:999px;border:1px solid rgba(255,255,255,.22);color:var(--fg);background:rgba(255,255,255,.04)}
+.cta a.primary{background:var(--grad);border:0;color:var(--accent-ink)}
+.cta a:focus-visible,.offer-card:focus-visible,.svc-go:focus-visible,summary:focus-visible{outline:2px solid var(--accent2);outline-offset:3px}
+
+/* offer */
+.offer{background:radial-gradient(120% 140% at 100% 0%,rgba(255,138,196,.14) 0%,rgba(10,11,20,0) 55%),radial-gradient(120% 140% at 0% 100%,rgba(127,227,255,.10) 0%,rgba(10,11,20,0) 55%),var(--bg2);border-radius:28px;margin:0 24px;padding:64px 56px}
+.offer-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px}
+.offer h2{margin-bottom:10px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.dday{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;padding:4px 12px;border-radius:999px;border:1px solid rgba(255,138,196,.5);color:var(--accent)}
+.offer .lead{font-size:15px;color:var(--mute)}
+.seats{display:flex;align-items:center;gap:12px;padding:14px 22px;border-radius:999px;background:rgba(10,11,20,.6);border:1px solid rgba(255,138,196,.35)}
+.seats-label{font-size:14px;color:var(--fg2)}
+.seats-num{font-family:'Space Grotesk',sans-serif;font-size:18px;color:var(--mute)}
+.seats-num b{font-size:26px;color:var(--fg);animation:breathe 2.8s ease-in-out infinite}
+.pulse{position:relative;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.pulse::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid var(--accent);animation:ring 2.8s ease-out infinite}
+@keyframes ring{0%{transform:scale(.4);opacity:.9}80%,100%{transform:scale(1.6);opacity:0}}
+@keyframes breathe{0%,100%{opacity:1;text-shadow:0 0 0 rgba(255,138,196,0)}50%{opacity:.72;text-shadow:0 0 18px rgba(255,138,196,.55)}}
+.seats.closed{border-color:var(--line2)}
+.seats.closed .pulse{background:var(--dim)}
+.seats.closed .pulse::after,.seats.closed b{animation:none}
+.offer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.offer-card{position:relative;display:flex;flex-direction:column;gap:6px;padding:28px;border-radius:20px;background:rgba(10,11,20,.55);border:1px solid var(--line2);text-decoration:none;color:var(--fg);transition:border-color .2s,transform .2s}
+.offer-card:hover{border-color:rgba(255,138,196,.6);transform:translateY(-2px)}
+.oc-name{font-size:15px;color:var(--mute)}
+.oc-was{font-size:16px;color:var(--dim);text-decoration:line-through}
+.oc-now{font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:700;line-height:1.1}
+.oc-now small{font-family:'Pretendard Variable','Pretendard',sans-serif;font-size:18px;font-weight:600}
+.oc-off{position:absolute;top:24px;right:24px;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;padding:5px 10px;border-radius:999px;background:var(--grad);color:var(--accent-ink)}
+
+/* portfolio */
+.pf-tabs{border-radius:999px;overflow:hidden;border-color:var(--line2)}
+.pf-tab[aria-selected="true"]{background:var(--grad);color:var(--accent-ink)}
+.pf-media{border-radius:16px}
+.pf-empty{border-radius:16px}
+
+/* services */
+.svc-grid,.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.svc{display:flex;flex-direction:column;gap:12px;padding:28px;border-radius:20px;background:var(--bg2);border:1px solid var(--line)}
+.svc-no{font-family:'Space Grotesk',sans-serif;font-size:13px;color:var(--accent2);letter-spacing:.1em}
+.svc h3,.why h3{margin:0;font-size:21px}
+.svc p,.why p{margin:0;font-size:15px;color:var(--fg2);flex:1}
+.svc-price{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700}
+.svc-price small{font-family:'Pretendard Variable','Pretendard',sans-serif;font-size:15px;font-weight:600;color:var(--mute)}
+.svc-go{align-self:flex-start;color:var(--accent);font-weight:700;text-decoration:none;font-size:15px}
+.why{padding:28px 0;border-top:1px solid var(--line2);display:flex;flex-direction:column;gap:10px}
+
+/* estimator skin */
+#form{background:var(--bg2);border-radius:28px;margin:0 24px;padding:72px 56px}
+.tab{border-radius:14px}
+.tab[aria-current="step"]{border-color:var(--accent)}
+.tab[aria-current="step"] .d{background:var(--grad)}
+.opt{border-radius:14px;background:var(--bg)}
+.opt[aria-pressed="true"]{border-color:var(--accent);background:#1E1528}
+.opt[aria-pressed="true"]::after{background:var(--accent)}
+.field input,.field textarea{border-radius:12px;background:var(--bg)}
+.btn{border-radius:999px}
+.btn.primary{background:var(--grad);border:0;color:var(--accent-ink)}
+.box{border-radius:18px;background:var(--bg)}
+.total{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.total small{-webkit-text-fill-color:var(--fg)}
+.copyout{border-radius:12px;background:var(--bg2)}
+
+/* faq */
+.faq{display:flex;flex-direction:column;border-top:1px solid var(--line2)}
+.faq details{border-bottom:1px solid var(--line2)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;font-size:17px;font-weight:700;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:24px;font-weight:400;color:var(--accent)}
+.faq details[open] summary::after{content:"−"}
+.faq details>div{padding:0 0 22px;color:var(--fg2);font-size:15px;display:flex;flex-direction:column;gap:10px}
+.faq ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+
+/* closing */
+.closing{text-align:center;padding:110px 64px}
+.closing h2{font-size:36px;margin-bottom:28px}
+
+
+/* refinements */
+.kv-hero{width:100vw;margin-left:calc(50% - 50vw);min-height:680px}
+.kv-art{background-size:auto 112%;background-position:100% 28%}
+.kv-shade{background:
+  linear-gradient(90deg,rgba(10,11,20,1) 0%,rgba(10,11,20,.96) 34%,rgba(10,11,20,.6) 52%,rgba(10,11,20,.12) 74%,rgba(10,11,20,0) 100%),
+  linear-gradient(0deg,rgba(10,11,20,1) 0%,rgba(10,11,20,0) 26%)}
+.kv-inner{max-width:1040px;margin:0 auto;width:100%}
+@media (min-width:900px){ .pf-grid{grid-template-columns:repeat(3,minmax(0,1fr))} .pf-grid.single{grid-template-columns:minmax(0,1fr)} }
+@media (max-width:640px){
+  .kv-hero{min-height:0}
+  .kv-art{background-size:cover;background-position:72% 20%}
+  .kv-shade{background:linear-gradient(0deg,rgba(10,11,20,1) 0%,rgba(10,11,20,0) 45%),linear-gradient(180deg,rgba(10,11,20,.85) 0%,rgba(10,11,20,0) 32%)}
+  .kv-top .logo{text-shadow:0 1px 8px rgba(0,0,0,.6)}
+  .kv-inner{position:static}
+  .kv-top{position:absolute;top:16px;left:20px;right:20px;z-index:2}
+  .kv-copy{margin-top:-8px}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .seats-num b,.pulse::after{animation:none}
+  .offer-card{transition:none}
+}
+@media (max-width:860px){
+  .svc-grid,.why-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  section{padding:64px 20px}
+  .kv-hero{min-height:0;flex-direction:column}
+  .kv-art{position:relative;inset:auto;height:300px;background-position:72% 20%}
+  .kv-shade{background:linear-gradient(0deg,rgba(10,11,20,1) 0%,rgba(10,11,20,0) 40%);height:300px;bottom:auto}
+  .kv-inner{padding:0 20px 56px}
+  .kv-top{position:absolute;top:16px;left:20px;right:20px}
+  .kv-hero h1{font-size:34px}
+  .kv-sub{font-size:16px}
+  .offer,#form{margin:0 12px;padding:48px 20px;border-radius:22px}
+  .offer-grid{grid-template-columns:minmax(0,1fr)}
+  .oc-now{font-size:34px}
+  .seats{width:100%;justify-content:center}
+  .closing{padding:80px 20px}
+  .closing h2{font-size:26px}
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="kv-hero">
+  <div class="kv-art" role="img" aria-label="ハートチャージ１００％ 커버 일러스트"></div>
+  <div class="kv-shade"></div>
+  <div class="kv-inner">
+    <div class="kv-top"><span class="logo">V_VERS</span><a class="kv-home" href="https://vvers.com" target="_blank" rel="noopener">vvers.com ↗</a></div>
+    <div class="kv-copy">
+      <span class="badge">한국 서비스 오픈</span>
+      <h1>캐릭터의 노래,<br>이제 <em>한국어로</em> 의뢰하세요</h1>
+      <p class="kv-sub">원화 결제 · 한국어 상담 · 오픈 특가 선착순 3팀</p>
+      <div class="cta"><a class="primary" href="#form">견적 받기</a><a href="#portfolio">작업물 듣기</a></div>
+    </div>
+  </div>
+</header>
+
+<section class="offer" id="offer">
+  <div class="offer-head">
+    <div>
+      <p class="eyebrow">OPEN EVENT</p>
+      <h2>오픈 특가 <span class="dday" data-dday>D-48</span></h2>
+      <p class="lead">2026년 11월 30일까지 · 아트머그 · X 통합 선착순 3팀 · 후기 작성 조건</p>
+    </div>
+    <div class="seats" data-seats-box>
+      <span class="pulse" aria-hidden="true"></span>
+      <span class="seats-label">남은 자리</span>
+      <span class="seats-num"><b data-seats-left>3</b> / <span data-seats-total>3</span></span>
+    </div>
+  </div>
+  <div class="offer-grid">
+    <a class="offer-card" href="#form" data-pick="orig">
+      <span class="oc-name">오리지널곡 · 방송용</span>
+      <span class="oc-was">600,000원</span>
+      <span class="oc-now">480,000<small>원</small></span>
+      <span class="oc-off">20% OFF</span>
+    </a>
+    <a class="offer-card" href="#form" data-pick="bgm">
+      <span class="oc-name">BGM 2~3분 · 방송용</span>
+      <span class="oc-was">250,000원</span>
+      <span class="oc-now">200,000<small>원</small></span>
+      <span class="oc-off">20% OFF</span>
+    </a>
+  </div>
+</section>
+
+<section id="portfolio">
+  <p class="eyebrow">LISTEN</p>
+  <h2>작업물 듣기</h2>
+  <div class="pf-tabs" role="tablist" aria-label="작업물 종류">
+    <button type="button" class="pf-tab" role="tab" data-pf="orig" aria-selected="true">오리지널곡</button>
+    <button type="button" class="pf-tab" role="tab" data-pf="bgm" aria-selected="false">BGM</button>
+  </div>
+  <div class="pf-grid" data-pf-grid></div>
+  <p class="lead" style="margin-top:24px;font-size:16px">여기에 담지 못한 곡이 더 많습니다. 원하시는 장르를 알려주시면 딱 맞는 샘플로 들려드릴게요.</p>
+</section>
+
+<section id="services">
+  <p class="eyebrow">SERVICES</p>
+  <h2>무엇을 만들어 드릴까요</h2>
+  <div class="svc-grid">
+    <div class="svc">
+      <span class="svc-no">01</span>
+      <h3>오리지널곡</h3>
+      <p>데뷔곡, 기념곡, 캐릭터 테마곡. 3~4분 풀사이즈로 작곡부터 가이드 보컬, 믹싱·마스터링까지.</p>
+      <div class="svc-price">600,000<small>원~</small></div>
+      <a class="svc-go" href="#form" data-pick="orig">견적 계산 →</a>
+    </div>
+    <div class="svc">
+      <span class="svc-no">02</span>
+      <h3>BGM</h3>
+      <p>방송 · 영상 · 게임을 위한 2~3분 완성곡. 반복 재생에도 자연스럽게 어울리도록.</p>
+      <div class="svc-price">250,000<small>원~</small></div>
+      <a class="svc-go" href="#form" data-pick="bgm">견적 계산 →</a>
+    </div>
+    <div class="svc">
+      <span class="svc-no">03</span>
+      <h3>커버곡 어레인지</h3>
+      <p>부르고 싶은 곡을 새로운 분위기로. 어쿠스틱 피아노 또는 밴드 · 풀 편성 Inst.</p>
+      <div class="svc-price">150,000<small>원~</small></div>
+      <a class="svc-go" href="#form" data-pick="cover">견적 계산 →</a>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <p class="eyebrow">WHY V_VERS</p>
+  <h2>V_VERS와 함께하는 이유</h2>
+  <div class="why-grid">
+    <div class="why"><h3>캐릭터를 위한 음악</h3><p>캐릭터 IP · 게임 · 버추얼 아티스트의 세계관을 이해하고, 그 이야기에 맞는 곡을 만듭니다.</p></div>
+    <div class="why"><h3>해외 크리에이터 협업</h3><p>국내외 보컬 · 크리에이터와 J-POP, K-POP, J-ROCK 등 다양한 장르를 작업해 왔습니다.</p></div>
+    <div class="why"><h3>작곡가가 끝까지</h3><p>작곡 · 편곡부터 믹싱 · 마스터링까지 작곡가가 직접 완성해, 처음 의도한 소리 그대로 전달합니다.</p></div>
+  </div>
+  <p class="note" style="margin-top:20px">Producer Kailoe · Co-Producer Wheely Jung</p>
+</section>
+
+<section id="form">
+  <p class="eyebrow">ESTIMATE &amp; REQUEST</p>
+  <h2>예상 견적 · 신청 양식</h2>
+  <p class="lead">원하는 상품과 옵션을 고르면 예상 견적이 바로 계산되고, 버튼 하나로 V_VERS에 견적 문의를 보낼 수 있습니다.</p>
+
+  <div class="tabs" role="tablist" aria-label="신청 단계">
+    <button type="button" class="tab" data-go="0" aria-current="step"><span class="d">1</span>상품</button>
+    <button type="button" class="tab" data-go="1"><span class="d">2</span>구성</button>
+    <button type="button" class="tab" data-go="2"><span class="d">3</span>정보</button>
+    <button type="button" class="tab" data-go="3"><span class="d">4</span>확인</button>
+  </div>
+
+  <div class="panel on" data-panel="0">
+    <p class="q">어떤 음악이 필요하신가요?</p>
+    <p class="qsub">하나를 선택해 주세요.</p>
+    <div class="opts" data-group="product">
+      <button type="button" class="opt" data-val="orig" aria-pressed="false"><span class="t">오리지널곡</span><span class="s">3~4분 · 가이드 보컬 포함</span><span class="p">600,000원~</span></button>
+      <button type="button" class="opt" data-val="bgm" aria-pressed="false"><span class="t">BGM</span><span class="s">2~3분 · 방송 · 영상 · 게임</span><span class="p">250,000원~</span></button>
+      <button type="button" class="opt" data-val="cover" aria-pressed="false"><span class="t">커버곡 어레인지</span><span class="s">원곡을 새로운 장르로 · Inst / MR</span><span class="p">150,000원~</span></button>
+    </div>
+    <div class="warn" data-warn="0"></div>
+    <div class="nav"><span></span><button type="button" class="btn primary" data-next>다음</button></div>
+  </div>
+
+  <div class="panel" data-panel="1">
+    <p class="q">어떤 구성으로 진행할까요?</p>
+    <p class="qsub" data-q1sub>이용 범위를 고르고, 필요한 추가 옵션을 선택해 주세요.</p>
+    <div class="group" data-section="ctype" hidden>
+      <div class="label">편성</div>
+      <div class="opts" data-group="ctype">
+        <button type="button" class="opt" data-val="piano" aria-pressed="false"><span class="t">어쿠스틱 피아노</span><span class="s">피아노 중심 어레인지</span><span class="p">150,000원</span></button>
+        <button type="button" class="opt" data-val="band" aria-pressed="false"><span class="t">밴드 · 풀 편성</span><span class="s">밴드 · 오케스트라 · 전자음악</span><span class="p">300,000원</span></button>
+      </div>
+    </div>
+    <div class="group" data-section="license">
+      <div class="label">이용 범위</div>
+      <div class="opts" data-group="license">
+        <button type="button" class="opt" data-val="bc" aria-pressed="false"><span class="t">방송용</span><span class="s">방송 · 유튜브 · 쇼츠 · PV</span><span class="p" data-price="bc"></span></button>
+        <button type="button" class="opt" data-val="cm" aria-pressed="false"><span class="t">상업용</span><span class="s">음원 발매 · 기업 · 광고 · 게임 · 독점</span><span class="p" data-price="cm"></span></button>
+        <button type="button" class="opt" data-val="ev" aria-pressed="false"><span class="t">오픈 이벤트 (방송용)</span><span class="s">통합 선착순 3팀 · 후기 작성 조건</span><span class="p" data-price="ev"></span></button>
+      </div>
+    </div>
+    <div class="group">
+      <div class="label" data-addon-label>추가 옵션 (여러 개 선택 가능)</div>
+      <div class="opts" data-group="addons">
+        <button type="button" class="opt" data-val="mix" aria-pressed="false"><span class="t">외부 협력 스튜디오 믹싱·마스터링</span><span class="s">작업 기간 최대 4주</span><span class="p">+300,000원</span></button>
+        <button type="button" class="opt" data-val="guitar" aria-pressed="false"><span class="t">리얼 세션 · 기타</span><span class="s">작업 기간 최대 4주</span><span class="p">+150,000원</span></button>
+        <button type="button" class="opt" data-val="bass" aria-pressed="false"><span class="t">리얼 세션 · 베이스</span><span class="s">작업 기간 최대 4주</span><span class="p">+150,000원</span></button>
+        <button type="button" class="opt" data-val="drum" aria-pressed="false"><span class="t">리얼 세션 · 드럼</span><span class="s">작업 기간 최대 4주</span><span class="p">+150,000원</span></button>
+        <button type="button" class="opt" data-val="rush" aria-pressed="false"><span class="t">빠른 마감 (1주 이내)</span><span class="s" data-rush-note>곡 금액의 50%</span><span class="p" data-price="rush"></span></button>
+      </div>
+      <div class="warn" data-warn="1"></div>
+    </div>
+    <div class="nav"><button type="button" class="btn" data-prev>이전</button><button type="button" class="btn primary" data-next>다음</button></div>
+  </div>
+
+  <div class="panel" data-panel="2">
+    <p class="q">곡에 대해 알려주세요</p>
+    <p class="qsub">답장받을 연락처만 꼭 적어 주세요. 나머지는 비워두셔도 상담하면서 함께 정리해 드릴게요.</p>
+    <div class="field"><label for="f-contact">답장받을 연락처 <span class="req">(필수)</span></label><input id="f-contact" data-field="contact" placeholder="이메일 또는 X 아이디 (@아이디)" autocomplete="email" required></div>
+    <div class="field"><label for="f-name">활동명 / 채널명</label><input id="f-name" data-field="name" placeholder="예: 활동명"></div>
+    <div class="field"><label for="f-mood">원하는 분위기 · 장르</label><input id="f-mood" data-field="mood" placeholder="예: 청량한 J-pop, 잔잔한 피아노"></div>
+    <div class="field"><label for="f-ref">레퍼런스 곡</label><input id="f-ref" data-field="ref" placeholder="곡 제목 - 아티스트"></div>
+    <div class="field"><label for="f-date">희망 마감일</label><input id="f-date" data-field="date" placeholder="예: 11월 말"></div>
+    <div class="field"><label for="f-memo">요청 사항</label><textarea id="f-memo" data-field="memo" rows="3" placeholder="캐릭터 설정, 사용 장면 등"></textarea></div>
+    <div class="warn" data-warn="2"></div>
+    <div class="nav"><button type="button" class="btn" data-prev>이전</button><button type="button" class="btn primary" data-next>확인하기</button></div>
+  </div>
+
+  <div class="panel" data-panel="3">
+    <p class="q">이 내용으로 견적을 보내주세요</p>
+    <p class="qsub">내용을 확인하고 "견적 보내기"를 누르면 V_VERS에 바로 전달됩니다. 확인 후 적어주신 연락처로 답장드릴게요.</p>
+    <div class="summary">
+      <div class="box">
+        <h3>작성한 답변</h3>
+        <div class="kv" data-kv></div>
+      </div>
+      <div class="box">
+        <h3>예상 견적</h3>
+        <div class="lines" data-lines></div>
+        <div style="height:1px;background:var(--line2);margin:14px 0"></div>
+        <div class="muted" style="font-size:14px">예상 금액</div>
+        <div class="total" data-total>0<small>원</small></div>
+        <div class="muted" style="font-size:14px;margin-top:4px" data-period></div>
+        <p class="note" style="margin-top:12px;font-size:14px">예상 금액이며, 최종 금액은 상담 후 확정됩니다.</p>
+        <button type="button" class="btn primary" style="width:100%;margin-top:16px" data-send>견적 보내기</button>
+        <div class="copied" data-copied aria-live="polite"></div>
+        <label class="muted" style="font-size:13px" for="copy-out">보낼 내용</label>
+        <textarea id="copy-out" class="copyout" readonly data-out></textarea>
+      </div>
+    </div>
+    <div class="nav" style="margin-top:20px"><button type="button" class="btn" data-prev>이전</button><button type="button" class="btn" data-reset>처음부터</button></div>
+  </div>
+</section>
+<section id="faq">
+  <p class="eyebrow">FAQ</p>
+  <h2>자주 묻는 질문</h2>
+  <div class="faq">
+    <details><summary>방송용과 상업용은 어떻게 다른가요?</summary><div>
+      <p><b>방송용</b>은 개인 크리에이터의 라이브 방송, 유튜브 영상 · 쇼츠 · PV 업로드에 사용할 수 있어요. 후원 · 광고 수익이 있는 채널도 포함되며 비독점 사용입니다.</p>
+      <p><b>상업용</b>(방송용 × 2)은 음원 발매, 기업 · MCN · 단체 비용 처리, 광고, 판매되는 게임 · 앱 · 콘텐츠에 사용할 수 있고 의뢰인이 독점으로 사용합니다.</p>
+      <p>오리지널곡과 BGM의 저작권은 V_VERS에 있으며, 선택하신 범위 안에서 사용을 허락해 드립니다.</p>
+    </div></details>
+    <details><summary>추가 옵션에는 무엇이 있나요?</summary><div>
+      <p>외부 협력 스튜디오 믹싱 · 마스터링 +300,000원 (오리지널곡 · BGM), 리얼 악기 세션 악기당 +150,000원 (기타 · 베이스 · 드럼), 빠른 마감 1주 이내 곡 금액의 50%가 있어요.</p>
+      <p>커버곡 어레인지는 피아노 버전은 빠른 마감만, 밴드 · 풀 편성은 리얼 세션과 빠른 마감을 선택할 수 있어요. 리얼 세션 · 외부 믹싱을 선택하면 빠른 마감은 함께 선택할 수 없어요.</p>
+    </div></details>
+    <details><summary>작업 기간과 수정 횟수는요?</summary><div>
+      <p>모든 상품은 결제일로부터 <b>2주</b>, 리얼 세션이나 외부 스튜디오 믹싱을 선택하면 <b>최대 4주</b>입니다. 수정은 <b>2회</b>까지 포함이에요.</p>
+      <p>납품 파일은 WAV (48kHz / 24bit) + MP3이며, 게임용 등 끊김 없는 루프 버전이 필요하시면 요청해 주세요. 1분 이내의 짧은 곡은 별도로 협의합니다.</p>
+    </div></details>
+    <details><summary>결제는 어떻게 하나요?</summary><div>
+      <p>계좌이체로 <b>선금 50%</b>를 보내주시면 작업 일정이 확정되고, 최종본 확인 후 <b>잔금 50%</b>를 결제하시면 최종 파일을 전달드립니다. 입금 계좌는 견적 확정 후 안내드려요.</p>
+    </div></details>
+    <details><summary>환불 규정이 궁금해요</summary><div>
+      <ul>
+        <li>작업 시작 전: 선금 전액 환불</li>
+        <li>작업 시작 후, 데모 전달 전: 선금의 50% 환불</li>
+        <li>데모 전달 후: 선금 환불 불가 · 잔금 청구 없음</li>
+        <li>잔금 결제 후: 환불 불가</li>
+      </ul>
+    </div></details>
+    <details><summary>커버곡 어레인지의 저작권은요?</summary><div>
+      <p>커버 어레인지는 원곡의 저작권이 원작자에게 있어요. 커버 영상 업로드와 방송 사용을 위한 제작이며, 음원 발매 등 원곡 권리자의 허락이 필요한 사용은 의뢰인이 직접 확인해 주셔야 합니다.</p>
+    </div></details>
+    <details><summary>그 밖에 알아둘 점이 있나요?</summary><div>
+      <ul>
+        <li>완성곡은 V_VERS 포트폴리오로 공개될 수 있어요. 비공개를 원하시면 미리 말씀해 주세요.</li>
+        <li>업로드 시 크레딧 표기를 부탁드려요. (Music by V_VERS)</li>
+        <li>의뢰인의 답변이 늦어지는 경우 마감일이 조정될 수 있어요.</li>
+      </ul>
+    </div></details>
+  </div>
+</section>
+
+<section class="closing">
+  <h2>당신의 캐릭터에게<br>어울리는 노래를 만들어 드릴게요</h2>
+  <div class="cta" style="justify-content:center"><a class="primary" href="#form">견적 받기</a><a href="mailto:kailoe0125@gmail.com">메일로 문의</a></div>
+</section>
+
+<footer><div class="num" style="font-weight:700;letter-spacing:.18em">V_VERS</div><div class="note" style="text-align:right"><a href="mailto:kailoe0125@gmail.com">kailoe0125@gmail.com</a> · <a href="https://vvers.com" target="_blank" rel="noopener">vvers.com</a></div></footer>
+
+</div>
+
+<script>
+(function(){
+  // ===== 작업물: 유튜브 주소를 youtube 칸에 넣으면 플레이어가 생깁니다 =====
+  // 비워두면 "준비 중" 칸으로 보이고, 줄을 지우면 칸이 사라집니다.
+  var PORTFOLIO = {
+    orig: [
+      { title: 'ハートチャージ１００％', sub: 'Feat. HEENA · J-POP, KAWAII POP', youtube: 'https://youtu.be/XYqeW2e-yQ8' },
+      { title: '홍잠', sub: 'Feat. HEENA · K-POP', youtube: 'https://youtu.be/Rq8HzvNt5L8' },
+      { title: '고동', sub: 'Feat. HEENA, SAKI, KAILRI · J-POP, J-ROCK', youtube: 'https://youtu.be/weV2dYgRcFU' },
+      { title: 'U.N.I.Q.U.E', sub: 'Feat. 유니, 하츠네 미쿠 · J-POP', youtube: 'https://youtu.be/7z20UC2gpu8' },
+      { title: 'My concerto', sub: 'Feat. HEENA · J-POP', youtube: 'https://youtu.be/yz7-pPY4edU' },
+      { title: '녹차는 살 안쪄!', sub: 'Feat. SAKI, HEENA · J-POP, KAWAII POP', youtube: 'https://youtu.be/0_mrdNXsRO0' }
+    ],
+    bgm: [
+      { title: 'Learn from the Front', sub: 'CCC 2026 · COROS · 희망, 차분 · 다큐멘터리', youtube: 'https://youtu.be/rxCN5vF_ZFA' }
+    ]
+  };
+  // ==========================================================================
+
+  function ytId(u){
+    if (!u) return '';
+    var m = String(u).match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([A-Za-z0-9_-]{11})/);
+    return m ? m[1] : (/^[A-Za-z0-9_-]{11}$/.test(u) ? u : '');
+  }
+  var grid = document.querySelector('[data-pf-grid]');
+  function show(kind){
+    document.querySelectorAll('.pf-tab').forEach(function(t){ t.setAttribute('aria-selected', String(t.dataset.pf === kind)); });
+    grid.innerHTML = '';
+    grid.classList.toggle('single', PORTFOLIO[kind].length === 1);
+    PORTFOLIO[kind].forEach(function(item){
+      var wrap = document.createElement('div'); wrap.className = 'pf-item';
+      var media = document.createElement('div'); media.className = 'pf-media';
+      var id = ytId(item.youtube);
+      if (id){
+        var btn = document.createElement('button');
+        btn.type = 'button'; btn.className = 'pf-play';
+        btn.style.backgroundImage = 'url(https://i.ytimg.com/vi/' + id + '/hqdefault.jpg)';
+        btn.setAttribute('aria-label', item.title + ' 재생');
+        btn.addEventListener('click', function(){
+          var f = document.createElement('iframe');
+          f.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+          f.title = item.title;
+          f.allow = 'autoplay; encrypted-media; picture-in-picture';
+          f.allowFullscreen = true;
+          media.innerHTML = ''; media.appendChild(f);
+        });
+        media.appendChild(btn);
+      } else {
+        var e = document.createElement('div'); e.className = 'pf-empty'; e.textContent = '샘플 준비 중'; media.appendChild(e);
+      }
+      var t = document.createElement('div'); t.className = 'pf-title'; t.textContent = item.title;
+      var s = document.createElement('div'); s.className = 'pf-sub'; s.textContent = item.sub;
+      wrap.appendChild(media); wrap.appendChild(t); wrap.appendChild(s);
+      grid.appendChild(wrap);
+    });
+  }
+  document.querySelectorAll('.pf-tab').forEach(function(t){ t.addEventListener('click', function(){ show(t.dataset.pf); }); });
+  show('orig');
+})();
+
+(function(){
+  var FORM_ENDPOINT = 'https://formspree.io/f/mrpeyqvr';
+  var CONTACT_EMAIL = 'kailoe0125@gmail.com';
+  // ===== 가격은 여기서만 바꾸면 계산기에 전부 반영됩니다 =====
+  var PRODUCTS = {
+    orig:  { name: '오리지널곡', kind: 'license', bc: 600000, cm: 1200000, ev: 480000 },
+    bgm:   { name: 'BGM (2~3분)', kind: 'license', bc: 250000, cm: 500000, ev: 200000 },
+    cover: { name: '커버곡 어레인지', kind: 'type', types: {
+      piano: { name: '어쿠스틱 피아노', price: 150000 },
+      band:  { name: '밴드 · 풀 편성', price: 300000 }
+    } }
+  };
+  var LICENSE = { bc: '방송용', cm: '상업용', ev: '오픈 이벤트 방송용' };
+  var ADDONS = {
+    mix:    { name: '외부 협력 스튜디오 믹싱·마스터링', price: 300000 },
+    guitar: { name: '리얼 세션 · 기타', price: 150000 },
+    bass:   { name: '리얼 세션 · 베이스', price: 150000 },
+    drum:   { name: '리얼 세션 · 드럼', price: 150000 }
+  };
+  // ========================================================
+
+  var sent = false;
+  var fresh = function(){ return { step: 0, product: null, license: null, ctype: null, addons: {}, rush: false, fields: {} }; };
+  var state = fresh();
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var won = function(n){ return n.toLocaleString('ko-KR') + '원'; };
+
+  function isCover(){ return state.product === 'cover'; }
+  function allowed(k){
+    if (!isCover()) return true;
+    if (state.ctype === 'band') return k !== 'mix';
+    return false;
+  }
+  function heavy(){ return Object.keys(ADDONS).some(function(k){ return state.addons[k] && allowed(k); }); }
+  function rushBlocked(){ return heavy() || (!isCover() && state.license === 'ev'); }
+  function chosen(){ return isCover() ? !!state.ctype : !!state.license; }
+  function base(){
+    if (!state.product || !chosen()) return 0;
+    var P = PRODUCTS[state.product];
+    return isCover() ? P.types[state.ctype].price : P[state.license];
+  }
+  function baseName(){
+    var P = PRODUCTS[state.product];
+    return P.name + ' · ' + (isCover() ? P.types[state.ctype].name : LICENSE[state.license]);
+  }
+  function rushPrice(){ return chosen() && !rushBlocked() ? base() / 2 : 0; }
+
+  function calc(){
+    var lines = [], total = 0;
+    if (state.product && chosen()){ lines.push([baseName(), base()]); total += base(); }
+    Object.keys(ADDONS).forEach(function(k){ if (state.addons[k] && allowed(k)){ lines.push([ADDONS[k].name, ADDONS[k].price]); total += ADDONS[k].price; } });
+    var rushOn = state.rush && !rushBlocked() && chosen();
+    if (rushOn){ lines.push(['빠른 마감 (1주 이내)', rushPrice()]); total += rushPrice(); }
+    var period = rushOn ? '작업 기간: 1주 이내' : heavy() ? '작업 기간: 최대 4주' : '작업 기간: 2주';
+    return { lines: lines, total: total, period: period };
+  }
+
+  function render(){
+    $$('.tab').forEach(function(t, i){ if (i === state.step) t.setAttribute('aria-current', 'step'); else t.removeAttribute('aria-current'); });
+    $$('.panel').forEach(function(p, i){ p.classList.toggle('on', i === state.step); });
+
+    $$('[data-group="product"] .opt').forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.val === state.product)); });
+
+    var cover = isCover();
+    $('[data-section="license"]').hidden = cover;
+    $('[data-section="ctype"]').hidden = !cover;
+    $('[data-q1sub]').textContent = cover ? '편성을 고르고, 필요한 옵션을 선택해 주세요.' : '이용 범위를 고르고, 필요한 추가 옵션을 선택해 주세요.';
+    $$('[data-group="license"] .opt').forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.val === state.license)); });
+    $$('[data-group="ctype"] .opt').forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.val === state.ctype)); });
+    if (!cover && state.product){
+      var P = PRODUCTS[state.product];
+      ['bc','cm','ev'].forEach(function(k){ var el = $('[data-price="' + k + '"]'); if (el) el.textContent = won(P[k]); });
+    }
+
+    Object.keys(ADDONS).forEach(function(k){ if (!allowed(k)) state.addons[k] = false; });
+    var blocked = rushBlocked();
+    if (blocked && state.rush) state.rush = false;
+    $$('[data-group="addons"] .opt').forEach(function(b){
+      var k = b.dataset.val;
+      if (k === 'rush'){
+        b.disabled = blocked;
+        b.setAttribute('aria-pressed', String(state.rush));
+      } else {
+        b.hidden = !allowed(k);
+        b.setAttribute('aria-pressed', String(!!state.addons[k]));
+      }
+    });
+    $('[data-addon-label]').textContent = (cover && state.ctype === 'piano') ? '추가 옵션' : '추가 옵션 (여러 개 선택 가능)';
+    $('[data-price="rush"]').textContent = chosen() && !(!cover && state.license === 'ev') ? '+' + won(base() / 2) : '곡 금액의 50%';
+    var w = '';
+    if (cover && !state.ctype) w = '';
+    else if (blocked) w = (!cover && state.license === 'ev') ? '오픈 이벤트 가격에는 빠른 마감을 적용하지 않습니다.' : (cover ? '리얼 세션을 선택하면 빠른 마감은 선택할 수 없습니다.' : '리얼 세션 · 외부 믹싱을 선택하면 빠른 마감은 선택할 수 없습니다.');
+    $('[data-warn="1"]').textContent = w;
+
+    if (state.step === 3) renderSummary();
+  }
+
+  function renderSummary(){
+    var c = calc();
+    var f = state.fields;
+    var or = function(v){ return v && v.trim() ? v.trim() : '상담 시 전달'; };
+    var picks = Object.keys(ADDONS).filter(function(k){ return state.addons[k] && allowed(k); }).map(function(k){ return ADDONS[k].name; });
+    if (state.rush && !rushBlocked()) picks.push('빠른 마감 (1주 이내)');
+    var P = state.product ? PRODUCTS[state.product] : null;
+    var kv = [
+      ['답장받을 연락처', (f.contact || '').trim() || '미입력'],
+      ['상품', P ? P.name : '미선택'],
+      [isCover() ? '편성' : '이용 범위', !P || !chosen() ? '미선택' : (isCover() ? P.types[state.ctype].name : LICENSE[state.license])],
+      ['추가 옵션', picks.length ? picks.join(', ') : '없음'],
+      [isCover() ? '원곡 (제목 - 아티스트)' : '활동명 / 채널명', isCover() ? or(f.ref) : or(f.name)],
+      [isCover() ? '활동명 / 채널명' : '분위기 · 장르', isCover() ? or(f.name) : or(f.mood)],
+      [isCover() ? '원하는 분위기 · 장르' : '레퍼런스 곡', isCover() ? or(f.mood) : or(f.ref)],
+      ['희망 마감일', or(f.date)],
+      ['요청 사항', or(f.memo)]
+    ];
+    var kvEl = $('[data-kv]'); kvEl.innerHTML = '';
+    kv.forEach(function(r){ var d = document.createElement('div'); var s = document.createElement('span'); s.textContent = r[0]; d.appendChild(s); d.appendChild(document.createTextNode(r[1])); kvEl.appendChild(d); });
+    var lEl = $('[data-lines]'); lEl.innerHTML = '';
+    c.lines.forEach(function(l, i){ var d = document.createElement('div'); var a = document.createElement('span'); a.textContent = l[0]; var b = document.createElement('span'); b.className = 'num'; b.textContent = (i ? '+' : '') + won(l[1]); d.appendChild(a); d.appendChild(b); lEl.appendChild(d); });
+    $('[data-total]').innerHTML = c.total.toLocaleString('ko-KR') + '<small>원</small>';
+    $('[data-period]').textContent = c.period;
+
+    var text = ['[V_VERS 예상 견적 · 신청 양식]', ''];
+    kv.slice(0, 4).forEach(function(r){ text.push(r[0] + ': ' + r[1]); });
+    text.push('');
+    c.lines.forEach(function(l, i){ text.push('- ' + l[0] + ': ' + (i ? '+' : '') + won(l[1])); });
+    text.push('예상 금액 합계: ' + won(c.total));
+    text.push(c.period);
+    text.push('');
+    kv.slice(4).forEach(function(r){ text.push(r[0] + ': ' + r[1]); });
+    $('[data-out]').value = text.join('\n');
+    window.__quote = { subject: '[V_VERS 견적] ' + (P ? P.name : '') + ' · ' + won(c.total), total: won(c.total), product: P ? P.name : '' };
+    if (!sent){ $('[data-copied]').textContent = ''; }
+  }
+
+  function relabelFields(){
+    var cover = isCover();
+    $('label[for="f-ref"]').textContent = cover ? '원곡 (제목 - 아티스트)' : '레퍼런스 곡';
+    $('#f-ref').placeholder = cover ? '어레인지할 원곡' : '곡 제목 - 아티스트';
+    $('label[for="f-mood"]').textContent = cover ? '원하는 분위기 · 장르' : '원하는 분위기 · 장르';
+    $('#f-mood').placeholder = cover ? '예: 잔잔한 피아노 발라드, 시원한 밴드 사운드' : '예: 청량한 J-pop, 잔잔한 피아노';
+  }
+
+  function go(n){
+    if (n < 0) n = 0;
+    if (n > 0 && !state.product){ state.step = 0; render(); $('[data-warn="0"]').textContent = '먼저 상품을 선택해 주세요.'; return; }
+    if (n > 1 && !chosen()){ state.step = 1; render(); $('[data-warn="1"]').textContent = isCover() ? '편성을 선택해 주세요.' : '이용 범위를 선택해 주세요.'; return; }
+    if (n > 2 && !((state.fields.contact || '').trim())){ state.step = 2; render(); $('[data-warn="2"]').textContent = '답장받을 연락처(이메일 또는 X 아이디)를 적어 주세요.'; var c = $('#f-contact'); if (c) c.focus(); return; }
+    $('[data-warn="0"]').textContent = ''; $('[data-warn="2"]').textContent = '';
+    state.step = n; relabelFields(); render();
+    var form = document.getElementById('form');
+    if (form && form.scrollIntoView) form.scrollIntoView({ block: 'start' });
+  }
+
+  $$('[data-group="product"] .opt').forEach(function(b){ b.addEventListener('click', function(){
+    if (state.product !== b.dataset.val){ state.license = null; state.ctype = null; state.rush = false; state.addons = {}; }
+    state.product = b.dataset.val; $('[data-warn="0"]').textContent = ''; render();
+  }); });
+  $$('[data-group="license"] .opt').forEach(function(b){ b.addEventListener('click', function(){ state.license = b.dataset.val; render(); }); });
+  $$('[data-group="ctype"] .opt').forEach(function(b){ b.addEventListener('click', function(){ state.ctype = b.dataset.val; render(); }); });
+  $$('[data-group="addons"] .opt').forEach(function(b){ b.addEventListener('click', function(){
+    var k = b.dataset.val;
+    if (k === 'rush'){ if (!rushBlocked()) state.rush = !state.rush; }
+    else if (allowed(k)) state.addons[k] = !state.addons[k];
+    render();
+  }); });
+  $$('.tab').forEach(function(t){ t.addEventListener('click', function(){ go(Number(t.dataset.go)); }); });
+  $$('[data-next]').forEach(function(b){ b.addEventListener('click', function(){ go(state.step + 1); }); });
+  $$('[data-prev]').forEach(function(b){ b.addEventListener('click', function(){ go(state.step - 1); }); });
+  $$('[data-field]').forEach(function(i){ i.addEventListener('input', function(){ state.fields[i.dataset.field] = i.value; }); });
+  $('[data-reset]').addEventListener('click', function(){
+    state = fresh();
+    $$('[data-field]').forEach(function(i){ i.value = ''; });
+    go(0);
+  });
+  $('[data-send]').addEventListener('click', function(){
+    var btn = $('[data-send]'); var msg = $('[data-copied]');
+    if (sent) return;
+    var contact = (state.fields.contact || '').trim();
+    if (!contact){ go(2); return; }
+    var q = window.__quote || {};
+    var payload = { _subject: q.subject || '[V_VERS 견적]', '연락처': contact, '상품': q.product, '예상 금액': q.total, message: $('[data-out]').value };
+    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact)) payload.email = contact;
+    btn.disabled = true; btn.textContent = '보내는 중...'; msg.textContent = '';
+    fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+      .then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function(){
+        sent = true;
+        btn.textContent = '전송 완료';
+        msg.textContent = '견적이 V_VERS에 전달되었습니다. 확인 후 적어주신 연락처로 답장드릴게요.';
+      })
+      .catch(function(){
+        btn.disabled = false; btn.textContent = '견적 보내기';
+        var mail = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent(q.subject || '[V_VERS 견적]') + '&body=' + encodeURIComponent($('[data-out]').value);
+        msg.innerHTML = '';
+        msg.appendChild(document.createTextNode('전송에 실패했어요. 잠시 후 다시 시도하거나 '));
+        var a = document.createElement('a'); a.href = mail; a.textContent = '메일로 보내기'; a.style.color = 'inherit';
+        msg.appendChild(a); msg.appendChild(document.createTextNode('를 눌러 주세요.'));
+      });
+  });
+  $('[data-reset]').addEventListener('click', function(){ sent = false; var b = $('[data-send]'); b.disabled = false; b.textContent = '견적 보내기'; });
+
+  render();
+})();
+</script>
+<script>
+(function(){
+  // ===== 오픈 특가 설정: 남은 자리 숫자만 바꾸면 됩니다 =====
+  var SEATS_LEFT = 3;
+  var SEATS_TOTAL = 3;
+  var EVENT_END = '2026-11-30T23:59:59+09:00';
+  // ==========================================================
+  var end = new Date(EVENT_END).getTime();
+  var dayMs = 86400000;
+  var now = Date.now();
+  var dEl = document.querySelector('[data-dday]');
+  var left = Math.max(0, Math.ceil((end - now) / dayMs));
+  var over = now > end || SEATS_LEFT <= 0;
+  if (dEl) dEl.textContent = now > end ? '종료' : (left <= 1 ? 'D-DAY' : 'D-' + (left - 1));
+  var box = document.querySelector('[data-seats-box]');
+  var l = document.querySelector('[data-seats-left]');
+  var t = document.querySelector('[data-seats-total]');
+  if (l) l.textContent = Math.max(0, SEATS_LEFT);
+  if (t) t.textContent = SEATS_TOTAL;
+  if (box && over){
+    box.classList.add('closed');
+    box.querySelector('.seats-label').textContent = '오픈 특가 마감';
+  }
+  if (over){
+    var ev = document.querySelector('[data-group="license"] [data-val="ev"]');
+    if (ev){ ev.disabled = true; ev.querySelector('.s').textContent = '오픈 특가가 마감되었습니다'; }
+  }
+  // 카드의 "견적" 링크를 누르면 계산기에서 해당 상품을 미리 선택
+  document.querySelectorAll('[data-pick]').forEach(function(a){
+    a.addEventListener('click', function(){
+      var b = document.querySelector('[data-group="product"] [data-val="' + a.dataset.pick + '"]');
+      if (b) b.click();
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
