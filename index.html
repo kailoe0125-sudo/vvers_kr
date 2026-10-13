@@ -853,24 +853,28 @@ a.plain{color:var(--fg2)}
 </script>
 <script>
 (function(){
-  // ===== 오픈 특가 설정: 남은 자리 숫자만 바꾸면 됩니다 =====
-  var SEATS_LEFT = 3;
-  var SEATS_TOTAL = 3;
-  var EVENT_END = '2026-11-30T23:59:59+09:00';
-  // ==========================================================
-  var end = new Date(EVENT_END).getTime();
-  var dayMs = 86400000;
-  var now = Date.now();
-  var left = Math.max(0, Math.ceil((end - now) / dayMs));
-  var over = now > end || SEATS_LEFT <= 0;
-  var dText = now > end ? '종료' : (left <= 1 ? 'D-DAY' : 'D-' + (left - 1));
-  document.querySelectorAll('[data-dday]').forEach(function(e){ e.textContent = dText; });
-  document.querySelectorAll('[data-seats-left]').forEach(function(e){ e.textContent = Math.max(0, SEATS_LEFT); });
-  document.querySelectorAll('[data-seats-total]').forEach(function(e){ e.textContent = SEATS_TOTAL; });
-  if (over){
-    document.querySelectorAll('[data-seats-box]').forEach(function(b){ b.classList.add('closed'); var l = b.querySelector('.seats-label'); if (l) l.textContent = '오픈 특가 마감'; });
+  // ===== 오픈 특가 남은 자리: promo.json 한 파일만 고치면 X 페이지와 아트머그에 함께 반영됩니다 =====
+  var PROMO_URL = 'promo.json';
+  var DEF = { seats_left: 3, seats_total: 3, event_end: '2026-11-30T23:59:59+09:00' };
+  function applyPromo(c){
+    var end = new Date(c.event_end).getTime(), now = Date.now();
+    var left = Math.max(0, Math.ceil((end - now) / 86400000));
+    var seats = Math.max(0, Number(c.seats_left) || 0);
+    var over = now > end || seats <= 0;
+    var dText = now > end ? '종료' : (left <= 1 ? 'D-DAY' : 'D-' + (left - 1));
+    document.querySelectorAll('[data-dday]').forEach(function(e){ e.textContent = dText; });
+    document.querySelectorAll('[data-seats-left]').forEach(function(e){ e.textContent = seats; });
+    document.querySelectorAll('[data-seats-total]').forEach(function(e){ e.textContent = c.seats_total; });
+    document.querySelectorAll('[data-seats-box]').forEach(function(b){ b.classList.toggle('closed', over); var l = b.querySelector('.seats-label'); if (l) l.textContent = over ? '오픈 특가 마감' : '남은 자리'; });
     var ev = document.querySelector('[data-group="license"] [data-val="ev"]');
-    if (ev){ ev.disabled = true; ev.querySelector('.s').textContent = '오픈 특가가 마감되었습니다'; }
+    if (ev && over){ ev.disabled = true; var s = ev.querySelector('.s'); if (s) s.textContent = '오픈 특가가 마감되었습니다'; }
+  }
+  applyPromo(DEF);
+  if (window.fetch){
+    fetch(PROMO_URL + '?t=' + Date.now(), { cache: 'no-store' })
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(c){ if (c) applyPromo({ seats_left: c.seats_left, seats_total: c.seats_total || DEF.seats_total, event_end: c.event_end || DEF.event_end }); })
+      .catch(function(){});
   }
   // 카드의 "견적" 링크를 누르면 계산기에서 해당 상품을 미리 선택
   document.querySelectorAll('[data-pick]').forEach(function(a){
