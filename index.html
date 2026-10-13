@@ -882,5 +882,24 @@ a.plain{color:var(--fg2)}
 })();
 </script>
 
+<script>
+// 항상 맨 위에서 시작: 주소에 #form이 남거나 새로고침해도 히어로부터 보이게
+(function(){
+  try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch(e){}
+  if (location.hash) { try { history.replaceState(null, '', location.pathname + location.search); } catch(e){} }
+  window.scrollTo(0, 0);
+  window.addEventListener('load', function(){ if (!location.hash) window.scrollTo(0, 0); });
+  // 페이지 안 이동 링크는 주소창에 #을 남기지 않고 부드럽게 이동
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1); var t = id && document.getElementById(id);
+    if (!t) return;
+    e.preventDefault();
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    t.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+  });
+})();
+</script>
 </body>
 </html>
