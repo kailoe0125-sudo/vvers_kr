@@ -586,7 +586,7 @@ a.plain{color:var(--fg2)}
     ],
     bgm: [
       { title: 'Learn from the Front', sub: 'CCC 2026 · COROS · 희망, 차분 · 다큐멘터리', youtube: 'https://youtu.be/rxCN5vF_ZFA' },
-      { title: 'ORI', sub: 'Original Soundtrack · FrameFable × RageX Animation · 애니메이션 시리즈', youtube: '' }
+      { title: 'ORI', sub: 'Original Soundtrack · FrameFable × RageX Animation · 애니메이션 시리즈', youtube: '', image: '92603C2A-2E52-46CA-8C60-2FCD14246ECA.JPG' }
     ]
   };
   // ==========================================================================
@@ -619,6 +619,10 @@ a.plain{color:var(--fg2)}
           media.innerHTML = ''; media.appendChild(f);
         });
         media.appendChild(btn);
+      } else if (item.image){
+        var im = document.createElement('img'); im.src = item.image; im.alt = item.title; im.loading = 'lazy';
+        im.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover';
+        media.appendChild(im);
       } else {
         var e = document.createElement('div'); e.className = 'pf-empty'; e.textContent = '샘플 준비 중'; media.appendChild(e);
       }
