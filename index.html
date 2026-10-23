@@ -416,7 +416,7 @@ a.plain{color:var(--fg2)}
     <div><span class="n">05</span><span><b>수정 · 완성</b> — 수정은 2회까지, 피드백을 반영해 편곡, 믹싱, 마스터링을 진행합니다.</span></div>
     <div><span class="n">06</span><span><b>잔금 · 납품</b> — 최종본 확인 후 잔금 50%를 결제하시면 최종 파일을 전달드립니다.</span></div>
   </div>
-  <p class="note" style="margin-top:20px">기본 2주 (리얼 세션 · 외부 스튜디오 믹싱 추가 시 최대 4주) · 납품 WAV (48kHz / 24bit) + MP3</p>
+  <p class="note" style="margin-top:20px">기본 2주 (리얼 세션 추가 시 최대 2주 · 외부 스튜디오 믹싱 추가 시 최대 5주 더, 둘 다 추가해도 최대 5주) · 납품 WAV (48kHz / 24bit) + MP3</p>
 </section>
 
 <section id="why">
@@ -475,10 +475,10 @@ a.plain{color:var(--fg2)}
     <div class="group">
       <div class="label" data-addon-label>추가 옵션 (여러 개 선택 가능)</div>
       <div class="opts" data-group="addons">
-        <button type="button" class="opt" data-val="mix" aria-pressed="false"><span class="t">외부 협력 스튜디오 믹싱·마스터링</span><span class="s">작업 기간 최대 4주</span><span class="p">+300,000원</span></button>
-        <button type="button" class="opt" data-val="guitar" aria-pressed="false"><span class="t">리얼 세션 · 기타</span><span class="s">작업 기간 최대 4주</span><span class="p">+150,000원</span></button>
-        <button type="button" class="opt" data-val="bass" aria-pressed="false"><span class="t">리얼 세션 · 베이스</span><span class="s">작업 기간 최대 4주</span><span class="p">+150,000원</span></button>
-        <button type="button" class="opt" data-val="drum" aria-pressed="false"><span class="t">리얼 세션 · 드럼</span><span class="s">작업 기간 최대 4주</span><span class="p">+150,000원</span></button>
+        <button type="button" class="opt" data-val="mix" aria-pressed="false"><span class="t">외부 협력 스튜디오 믹싱·마스터링</span><span class="s">작업 기간 최대 5주 추가</span><span class="p">+300,000원</span></button>
+        <button type="button" class="opt" data-val="guitar" aria-pressed="false"><span class="t">리얼 세션 · 기타</span><span class="s">작업 기간 최대 2주 추가</span><span class="p">+150,000원</span></button>
+        <button type="button" class="opt" data-val="bass" aria-pressed="false"><span class="t">리얼 세션 · 베이스</span><span class="s">작업 기간 최대 2주 추가</span><span class="p">+150,000원</span></button>
+        <button type="button" class="opt" data-val="drum" aria-pressed="false"><span class="t">리얼 세션 · 드럼</span><span class="s">작업 기간 최대 2주 추가</span><span class="p">+150,000원</span></button>
         <button type="button" class="opt" data-val="rush" aria-pressed="false"><span class="t">빠른 마감 (1주 이내)</span><span class="s" data-rush-note>곡 금액의 50%</span><span class="p" data-price="rush"></span></button>
       </div>
       <div class="warn" data-warn="1"></div>
@@ -547,7 +547,7 @@ a.plain{color:var(--fg2)}
       <p>커버곡 어레인지는 피아노 버전은 빠른 마감만, 밴드 · 풀 편성은 리얼 세션과 빠른 마감을 선택할 수 있어요. 리얼 세션 · 외부 믹싱을 선택하면 빠른 마감은 함께 선택할 수 없어요.</p>
     </div></details>
     <details><summary>작업 기간과 수정 횟수는요?</summary><div>
-      <p>모든 상품은 결제일로부터 <b>2주</b>, 리얼 세션이나 외부 스튜디오 믹싱을 선택하면 <b>최대 4주</b>입니다. 수정은 <b>2회</b>까지 포함이에요.</p>
+      <p>모든 상품은 결제일로부터 <b>2주</b>이며, 리얼 세션을 추가하면 <b>최대 2주</b>, 외부 스튜디오 믹싱을 추가하면 <b>최대 5주</b>가 더 걸립니다. 둘 다 추가해도 최대 5주예요. 수정은 <b>2회</b>까지 포함이에요.</p>
       <p>납품 파일은 WAV (48kHz / 24bit) + MP3이며, 게임용 등 끊김 없는 루프 버전이 필요하시면 요청해 주세요. 1분 이내의 짧은 곡은 별도로 협의합니다.</p>
     </div></details>
     <details><summary>결제는 어떻게 하나요?</summary><div>
@@ -707,7 +707,7 @@ a.plain{color:var(--fg2)}
     Object.keys(ADDONS).forEach(function(k){ if (state.addons[k] && allowed(k)){ lines.push([ADDONS[k].name, ADDONS[k].price]); total += ADDONS[k].price; } });
     var rushOn = state.rush && !rushBlocked() && chosen();
     if (rushOn){ lines.push(['빠른 마감 (1주 이내)', rushPrice()]); total += rushPrice(); }
-    var period = rushOn ? '작업 기간: 1주 이내' : heavy() ? '작업 기간: 최대 4주' : '작업 기간: 2주';
+    var period = rushOn ? '작업 기간: 1주 이내' : (state.addons.mix && allowed('mix')) ? '작업 기간: 최대 7주 (기본 2주 + 최대 5주)' : heavy() ? '작업 기간: 최대 4주 (기본 2주 + 최대 2주)' : '작업 기간: 2주';
     return { lines: lines, total: total, period: period };
   }
 
