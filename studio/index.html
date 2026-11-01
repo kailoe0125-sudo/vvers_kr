@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="ko" data-lang="ko">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>V_VERS | Studio</title>
-<meta name="description" content="캐릭터와 세계관을 음악으로 완성하는 음악 스튜디오 V_VERS. 애니메이션 · 게임 · 버튜버 · OST를 위한 오리지널곡과 BGM.">
+<meta name="description" content="V_VERS is a music studio for characters, stories and worlds. Original songs, cover backing tracks, BGM and soundtracks for VTubers, singers, animation and games.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="V_VERS | Music for Characters, Stories, and Worlds">
-<meta property="og:description" content="애니메이션 · 게임 · 버튜버 · OST를 위한 오리지널곡과 BGM. 작업물을 바로 들어보세요.">
+<meta property="og:description" content="Original songs, BGM and soundtracks for VTubers, singers, animation and games. Listen to our work.">
 <meta property="og:url" content="https://kailoe0125-sudo.github.io/vvers_kr/studio/">
 <meta property="og:image" content="https://kailoe0125-sudo.github.io/vvers_kr/studio/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -15,172 +15,189 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=IBM+Plex+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* Layout: one long studio page. Dark blue-black ground, one cyan statement band, cards only where they group content. */
+/* Layout: a white studio page set like a cue sheet. Thin rules, mono meta labels, one ultramarine accent; two doors (creators / studios) right under the headline. */
 :root{
-  --bg:#070B16; --bg2:#0B1324; --surface:#101B31; --line:#1D2B49;
-  --fg:#EAF1FF; --soft:#B8C6E2; --muted:#8FA3C8;
-  --accent:#2BB8FF; --ink:#061021; --ink-soft:#0B2A44;
-  --f-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
-  --f-display:"Unbounded","IBM Plex Sans KR",system-ui,sans-serif;
-  color-scheme:dark;
+  --bg:#FFFFFF; --paper:#F5F7FB; --line:#E2E6EE; --line-2:#CBD2DE;
+  --ink:#0C1424; --soft:#3C465A; --muted:#677187;
+  --accent:#1F49D1; --accent-ink:#FFFFFF; --accent-tint:#EBF0FD;
+  --f-en:"Schibsted Grotesk","Helvetica Neue",Arial,system-ui,sans-serif;
+  --f-ja:"Noto Sans JP","Hiragino Sans","Yu Gothic",var(--f-en);
+  --f-ko:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",var(--f-en);
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --f-body:var(--f-en);
+  color-scheme:light;
 }
+html[data-lang="ja"]{--f-body:var(--f-ja)}
+html[data-lang="ko"]{--f-body:var(--f-ko)}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;word-break:keep-all}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+html[data-lang="ko"] body,html[data-lang="ja"] body{word-break:keep-all;line-break:strict}
 a{color:inherit}
 img{max-width:100%;display:block}
-h1,h2,h3,p,ul{margin:0}
-.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-section{padding-block:96px}
-.eyebrow{font-family:var(--f-display);font-size:13px;font-weight:700;letter-spacing:.2em;color:var(--accent);text-transform:uppercase}
-h2{font-size:clamp(28px,4.2vw,44px);line-height:1.25;font-weight:700;text-wrap:balance}
-.lead{color:var(--soft);font-size:18px;max-width:62ch}
-.head{display:flex;flex-direction:column;gap:14px;margin-bottom:44px}
-
+h1,h2,h3,p,ul,dl{margin:0}
 [hidden]{display:none!important}
-/* language */
-html[data-lang="ko"] .en, html[data-lang="en"] .ko{display:none!important}
+html[data-lang="en"] .ja,html[data-lang="en"] .ko,
+html[data-lang="ja"] .en,html[data-lang="ja"] .ko,
+html[data-lang="ko"] .en,html[data-lang="ko"] .ja{display:none!important}
 
-/* top bar */
-.bar{position:sticky;top:0;z-index:20;background:rgba(7,11,22,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{padding-block:104px;border-top:1px solid var(--line)}
+.label{font-family:var(--f-mono);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.label b{color:var(--accent);font-weight:500}
+h2{font-size:clamp(30px,4vw,46px);line-height:1.18;font-weight:700;letter-spacing:-.015em;text-wrap:balance;max-width:22ch}
+html[data-lang="ja"] h2,html[data-lang="ko"] h2{letter-spacing:0;line-height:1.3}
+.lead{color:var(--soft);font-size:18px;max-width:60ch}
+.head{display:flex;flex-direction:column;gap:16px;margin-bottom:52px}
+
+/* bar */
+.bar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
 .bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
-.logo{font-family:var(--f-display);font-weight:700;letter-spacing:.18em;font-size:15px;text-decoration:none}
-.bar nav{display:flex;align-items:center;gap:20px;font-size:14px}
+.logo{font-family:var(--f-en);font-weight:700;letter-spacing:.16em;font-size:16px;text-decoration:none}
+.bar nav{display:flex;align-items:center;gap:22px;font-size:14px}
 .bar nav a{text-decoration:none;color:var(--soft)}
-.bar nav a:hover{color:var(--fg)}
-.lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
-.lang button{font:inherit;font-size:13px;font-weight:700;background:none;border:0;color:var(--muted);padding:6px 12px;cursor:pointer}
-.lang button[aria-pressed="true"]{background:var(--accent);color:var(--ink)}
-@media (max-width:720px){.bar nav a{display:none}}
+.bar nav a:hover{color:var(--accent)}
+.lang{display:inline-flex;border:1px solid var(--line-2);border-radius:8px;overflow:hidden}
+.lang button{font-family:var(--f-en);font-size:13px;font-weight:600;background:none;border:0;color:var(--muted);padding:6px 11px;cursor:pointer}
+.lang button + button{border-left:1px solid var(--line-2)}
+.lang button[aria-pressed="true"]{background:var(--ink);color:#fff}
+@media (max-width:760px){.bar nav a{display:none}}
 
 /* hero */
-.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 85% 10%,#14336F 0%,var(--bg2) 38%,var(--bg) 72%);padding-block:120px 104px}
-.hero .ghost{position:absolute;right:-2vw;top:40px;font-family:var(--f-display);font-weight:700;font-size:clamp(90px,17vw,240px);line-height:1;color:transparent;-webkit-text-stroke:1.5px #24447F;pointer-events:none;user-select:none}
-.hero h1{position:relative;font-size:clamp(40px,7vw,84px);line-height:1.12;font-weight:700;text-wrap:balance;max-width:14ch}
-.hero .en h1,.hero h1.en{font-family:var(--f-display);font-size:clamp(34px,5.6vw,68px);max-width:16ch}
-.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
-.tag{background:var(--accent);color:var(--ink);font-weight:500;padding:6px 18px;border-radius:999px;font-size:16px}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
-.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:16px;padding:14px 22px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--ink)}
-.btn:hover{filter:brightness(1.08)}
-.credit{margin-top:56px;font-family:var(--f-display);font-size:13px;color:var(--muted);letter-spacing:.04em}
+.hero{padding-block:96px 88px;border-top:0}
+.hero h1{font-family:var(--f-en);font-size:clamp(42px,7.2vw,92px);line-height:1.02;letter-spacing:-.03em;font-weight:700;max-width:12ch;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--accent)}
+html[data-lang="ja"] .hero h1{font-family:var(--f-ja);font-size:clamp(34px,5.6vw,68px);letter-spacing:-.01em;line-height:1.22;max-width:15ch}
+html[data-lang="ko"] .hero h1{font-family:var(--f-ko);font-size:clamp(34px,5.6vw,68px);letter-spacing:-.01em;line-height:1.22;max-width:15ch}
+.hero .lead{margin-top:28px;font-size:19px}
+.doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:48px}
+.door{display:flex;flex-direction:column;gap:10px;padding:26px 26px 24px;border:1px solid var(--line-2);border-radius:14px;text-decoration:none;background:var(--bg);transition:border-color .15s,background .15s;min-width:0}
+.door:hover{border-color:var(--accent);background:var(--accent-tint)}
+.door .t{font-size:22px;font-weight:700;line-height:1.3}
+.door .s{color:var(--soft);font-size:15px}
+.door .go{font-family:var(--f-mono);font-size:13px;color:var(--accent);margin-top:6px}
+.proof{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:var(--soft)}
+.proof span{display:flex;gap:8px;align-items:baseline}
+.proof .label{letter-spacing:.1em}
 
-/* about band */
-.about{background:var(--accent);color:var(--ink)}
-.about .eyebrow{color:var(--ink)}
-.about h2{font-size:clamp(28px,4.6vw,52px);max-width:20ch}
-.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:56px}
-.pillars div{border-top:3px solid var(--ink);padding-top:20px}
-.pillars h3{font-size:20px;margin-bottom:8px}
-.pillars p{color:var(--ink-soft)}
-
-/* services */
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:32px;display:flex;flex-direction:column;gap:14px;min-width:0}
-.card .k{font-family:var(--f-display);font-size:12px;font-weight:700;letter-spacing:.18em;color:var(--accent)}
-.card .t{font-size:26px;font-weight:700;line-height:1.25}
-.card .s{color:var(--muted);font-size:15px}
-.card ul{padding-left:1.1em;color:var(--soft)}
-.card.hot{background:var(--accent);border-color:var(--accent);color:var(--ink)}
-.card.hot .k{color:var(--ink)} .card.hot .s,.card.hot ul{color:var(--ink-soft)}
-
-/* cases */
-.cases{background:var(--bg2)}
-.case{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:40px;border-top:1px solid var(--line)}
-.case:first-of-type{border-top:0}
-.case .meta{display:flex;flex-direction:column;gap:14px}
-.case h3{font-size:clamp(22px,2.8vw,30px);line-height:1.3}
-dl{display:grid;grid-template-columns:auto 1fr;gap:8px 20px;margin:6px 0 0}
-dt{color:var(--muted)} dd{margin:0}
-.media{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#000;border:1px solid var(--line);max-width:100%}
+/* featured */
+.feature{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:48px;align-items:center}
+.feature + .feature{margin-top:72px;padding-top:72px;border-top:1px solid var(--line)}
+.media{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#0C1424;max-width:100%}
 .media img{width:100%;height:100%;object-fit:cover}
 .media iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.play{position:absolute;inset:0;width:100%;height:100%;border:0;padding:0;cursor:pointer;background:#000 center/cover no-repeat}
-.play::after{content:"";position:absolute;left:50%;top:50%;width:68px;height:68px;transform:translate(-50%,-50%);border-radius:50%;background:rgba(43,184,255,.95) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 5v14l11-7z' fill='%23061021'/%3E%3C/svg%3E") 54% 50%/30px no-repeat;box-shadow:0 8px 30px rgba(0,0,0,.4)}
+.play{position:absolute;inset:0;width:100%;height:100%;border:0;padding:0;cursor:pointer;background:#0C1424 center/cover no-repeat}
+.play::after{content:"";position:absolute;left:50%;top:50%;width:62px;height:62px;transform:translate(-50%,-50%);border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 5v14l11-7z' fill='%231F49D1'/%3E%3C/svg%3E") 55% 50%/28px no-repeat;box-shadow:0 6px 24px rgba(12,20,36,.3);transition:transform .15s}
 .play:hover::after{transform:translate(-50%,-50%) scale(1.06)}
-.pill{display:inline-block;font-size:13px;font-weight:700;padding:3px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--soft);width:max-content}
+.feature .meta{display:flex;flex-direction:column;gap:16px;min-width:0}
+.feature h3{font-size:clamp(24px,2.8vw,32px);line-height:1.25;letter-spacing:-.01em;text-wrap:balance}
+dl.sheet{display:grid;grid-template-columns:auto 1fr;border-top:1px solid var(--line)}
+dl.sheet dt,dl.sheet dd{padding:10px 0;border-bottom:1px solid var(--line);margin:0}
+dl.sheet dt{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-right:24px;padding-top:13px}
 
 /* listen */
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.track{display:flex;flex-direction:column;gap:10px;min-width:0}
+.tabs{display:flex;gap:4px;margin-bottom:32px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.tabs button{font:inherit;font-size:15px;font-weight:600;padding:10px 4px;margin-right:20px;border:0;border-bottom:2px solid transparent;background:none;color:var(--muted);cursor:pointer;margin-bottom:-1px}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 24px}
+.track{display:flex;flex-direction:column;gap:6px;min-width:0}
+.track .media{margin-bottom:8px}
 .track .t{font-weight:700;font-size:17px}
 .track .s{color:var(--muted);font-size:14px}
-.tabs{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap}
-.tabs button{font:inherit;font-size:15px;font-weight:700;padding:8px 18px;border-radius:999px;border:1px solid var(--line);background:none;color:var(--soft);cursor:pointer}
-.tabs button[aria-selected="true"]{background:var(--fg);color:var(--ink);border-color:var(--fg)}
+.note{color:var(--muted);font-size:15px;margin-top:28px;max-width:70ch}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.col{border:1px solid var(--line);border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:20px;min-width:0;background:var(--bg)}
+.col h3{font-size:24px;line-height:1.3}
+.col .who{color:var(--soft);font-size:15px;margin-top:-10px}
+.items{list-style:none;padding:0;display:flex;flex-direction:column}
+.items li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding:14px 0;border-top:1px solid var(--line);align-items:baseline}
+.items li span:last-child{font-family:var(--f-mono);font-size:13px;color:var(--muted);white-space:nowrap}
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:64px}
+.why div{display:flex;flex-direction:column;gap:8px;border-top:2px solid var(--ink);padding-top:18px}
+.why h3{font-size:18px}
+.why p{color:var(--soft);font-size:15px}
 
 /* process */
-.steps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;counter-reset:s}
-.step{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 18px;display:flex;flex-direction:column;gap:6px;min-width:0}
-.step .n{font-family:var(--f-display);font-weight:700;color:var(--accent);font-size:15px}
-.step b{font-size:18px}
-.step span{color:var(--soft);font-size:14px;line-height:1.5}
-.step.last{background:var(--accent);border-color:var(--accent);color:var(--ink)}
-.step.last .n{color:var(--ink)} .step.last span{color:var(--ink-soft)}
-.note{color:var(--muted);font-size:15px;margin-top:22px}
+.paper{background:var(--paper)}
+.steps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:1px solid var(--line-2)}
+.step{padding:22px 16px 6px 0;display:flex;flex-direction:column;gap:6px;min-width:0}
+.step .n{font-family:var(--f-mono);font-size:13px;color:var(--accent)}
+.step b{font-size:18px;line-height:1.3}
+.step span:last-child{color:var(--soft);font-size:14px;line-height:1.5}
 
 /* pricing */
-.prices{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
-.price{display:flex;justify-content:space-between;align-items:center;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px 28px}
-.price + .price{margin-top:16px}
+.prices{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+.price{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:26px 0;border-top:1px solid var(--line-2)}
+.price:last-child{border-bottom:1px solid var(--line-2)}
 .price b{font-size:22px;display:block}
 .price small{color:var(--muted);font-size:14px}
-.price .v{font-family:var(--f-display);font-weight:700;font-size:clamp(24px,3vw,34px);color:var(--accent);white-space:nowrap;font-variant-numeric:tabular-nums}
-table{width:100%;border-collapse:collapse;font-size:16px}
-th,td{padding:12px 4px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-td:last-child,th:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
-th{color:var(--muted);font-weight:500;font-size:14px}
+.price .v{font-family:var(--f-en);font-weight:700;font-size:clamp(32px,4vw,46px);letter-spacing:-.02em;white-space:nowrap;font-variant-numeric:tabular-nums}
+.price .v small{font-size:14px;font-weight:500;letter-spacing:0;margin-left:4px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{padding:13px 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+td:last-child,th:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;padding-left:16px}
+th{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;border-bottom-color:var(--line-2)}
+.license{margin-top:40px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.license div{background:var(--paper);border-radius:12px;padding:22px 24px;display:flex;flex-direction:column;gap:6px}
+.license b{font-size:16px}
+.license p{color:var(--soft);font-size:15px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-family:inherit;font-weight:600;font-size:16px;padding:13px 22px;border-radius:10px;border:1px solid var(--line-2);background:var(--bg);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{filter:brightness(1.08)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
 
 /* contact */
-.contact{background:radial-gradient(circle at 15% 90%,#14336F 0%,var(--bg2) 40%,var(--bg) 75%)}
-.contact h2{font-size:clamp(34px,5.6vw,64px)}
-.contact-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px;margin-top:44px;align-items:start}
-.inquiry{background:rgba(16,27,49,.85);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:18px}
-.inquiry label{display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--soft);min-width:0}
-.inquiry input,.inquiry textarea{font:inherit;font-size:16px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 12px;width:100%}
-.inquiry input:focus,.inquiry textarea:focus{outline:none;border-color:var(--accent)}
-.inquiry input[aria-invalid="true"],.inquiry textarea[aria-invalid="true"]{border-color:#FF8A7A}
-.row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
-fieldset{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
-legend{font-size:14px;color:var(--soft);margin-bottom:8px;padding:0}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:56px;align-items:start}
+.inquiry{display:flex;flex-direction:column;gap:20px}
+.inquiry label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:500;color:var(--soft);min-width:0}
+.inquiry input,.inquiry textarea{font:inherit;font-size:16px;font-weight:400;color:var(--ink);background:var(--bg);border:1px solid var(--line-2);border-radius:10px;padding:12px 13px;width:100%}
+.inquiry input:focus,.inquiry textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-tint)}
+.inquiry input[aria-invalid="true"],.inquiry textarea[aria-invalid="true"]{border-color:#C8352B}
+.row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+fieldset{border:0;margin:0;padding:0}
+legend{font-size:14px;font-weight:500;color:var(--soft);margin-bottom:10px;padding:0}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips label{flex-direction:row}
+.chips label{flex-direction:row;font-weight:400}
 .chips input{position:absolute;opacity:0;width:1px;height:1px}
-.chips label > span{display:inline-block;padding:7px 14px;border-radius:999px;border:1px solid var(--line);color:var(--soft);font-size:14px;cursor:pointer}
-.chips input:checked + span{background:var(--accent);border-color:var(--accent);color:var(--ink);font-weight:700}
+.chips label > span{display:inline-block;padding:8px 15px;border-radius:999px;border:1px solid var(--line-2);color:var(--soft);font-size:14px;cursor:pointer}
+.chips input:checked + span{background:var(--ink);border-color:var(--ink);color:#fff}
 .chips input:focus-visible + span{outline:2px solid var(--accent);outline-offset:2px}
 .inquiry .btn{align-self:flex-start}
 .inquiry .btn[disabled]{opacity:.6;cursor:default}
 .f-status{font-size:15px;color:var(--soft);min-height:1.4em}
-.f-status.ok{color:var(--accent)} .f-status.err{color:#FF8A7A}
-.ways{display:flex;flex-direction:column;gap:24px}
-.ways .btn{align-self:flex-start}
+.f-status.ok{color:#17784E} .f-status.err{color:#C8352B}
+.ways{display:flex;flex-direction:column;gap:26px;padding:28px;background:var(--paper);border-radius:14px}
 .way{display:flex;flex-direction:column;gap:6px;min-width:0}
-.way small{color:var(--muted)}
-.way a,.way code{font-family:var(--f-display);font-size:clamp(16px,1.8vw,20px);font-weight:500;text-decoration:none;word-break:break-all}
-.copy{font:inherit;font-size:13px;background:none;border:1px solid var(--line);color:var(--soft);border-radius:8px;padding:3px 10px;cursor:pointer;width:max-content}
+.way a,.way code{font-family:var(--f-en);font-size:19px;font-weight:600;text-decoration:none;word-break:break-all}
+.way a:hover{color:var(--accent)}
+.copy{font:inherit;font-size:13px;background:var(--bg);border:1px solid var(--line-2);color:var(--soft);border-radius:8px;padding:3px 10px;cursor:pointer;width:max-content}
+.ways .btn{align-self:flex-start;font-size:15px;padding:11px 18px}
 footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-
 @media (max-width:900px){
-  .cards,.pillars,.contact-grid{grid-template-columns:1fr}
-  .case,.prices{grid-template-columns:1fr}
+  .feature,.prices,.contact-grid,.svc{grid-template-columns:1fr}
+  .feature{gap:28px}
   .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .steps{grid-template-columns:repeat(3,minmax(0,1fr))}
-  section{padding-block:72px}
+  .why{grid-template-columns:1fr;gap:24px}
+  section{padding-block:76px}
 }
-@media (max-width:540px){
-  .grid{grid-template-columns:1fr}
+@media (max-width:560px){
+  .doors,.grid,.license,.row2{grid-template-columns:1fr}
   .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .price{flex-direction:column;align-items:flex-start}
-  .row2{grid-template-columns:1fr}
+  .price{flex-direction:column;gap:6px}
+  .col{padding:24px}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
 <body>
@@ -189,12 +206,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <div class="wrap">
     <a class="logo" href="#top">V_VERS</a>
     <nav>
-      <a href="#work"><span class="ko">작업물</span><span class="en">Work</span></a>
-      <a href="#pricing"><span class="ko">가격</span><span class="en">Pricing</span></a>
-      <a href="#contact"><span class="ko">문의</span><span class="en">Contact</span></a>
+      <a href="#work"><span class="en">Work</span><span class="ja">作品</span><span class="ko">작업물</span></a>
+      <a href="#services"><span class="en">Services</span><span class="ja">サービス</span><span class="ko">서비스</span></a>
+      <a href="#pricing"><span class="en">Pricing</span><span class="ja">料金</span><span class="ko">가격</span></a>
+      <a href="#contact"><span class="en">Contact</span><span class="ja">お問い合わせ</span><span class="ko">문의</span></a>
       <div class="lang" role="group" aria-label="Language">
-        <button type="button" data-set="ko" aria-pressed="true">KR</button>
-        <button type="button" data-set="en" aria-pressed="false">EN</button>
+        <button type="button" data-set="en" aria-pressed="true">EN</button>
+        <button type="button" data-set="ja" aria-pressed="false">日本語</button>
+        <button type="button" data-set="ko" aria-pressed="false">한국어</button>
       </div>
     </nav>
   </div>
@@ -202,245 +221,230 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 <main id="top">
   <section class="hero">
-    <div class="ghost" aria-hidden="true">V_VERS</div>
     <div class="wrap">
-      <p class="eyebrow">V_VERS · Music Studio</p>
-      <h1 class="ko" style="margin-top:22px">캐릭터와 세계관을 음악으로 완성합니다</h1>
-      <h1 class="en" style="margin-top:22px">Music for Characters, Stories, and Worlds</h1>
-      <div class="tags">
-        <span class="tag"><span class="ko">애니메이션</span><span class="en">Animation</span></span>
-        <span class="tag"><span class="ko">게임</span><span class="en">Games</span></span>
-        <span class="tag"><span class="ko">버튜버</span><span class="en">VTubers</span></span>
-        <span class="tag">OST</span>
+      <p class="label"><b>V_VERS</b> · Music Studio</p>
+      <h1 class="en" style="margin-top:24px">Music for characters, stories <em>and worlds.</em></h1>
+      <h1 class="ja" style="margin-top:24px">キャラクターと世界観を、<em>音楽で完成させる。</em></h1>
+      <h1 class="ko" style="margin-top:24px">캐릭터와 세계관을 <em>음악으로 완성합니다.</em></h1>
+      <p class="lead en">Original songs, cover backing tracks, BGM and soundtracks for VTubers, singers, animation and games. Written, arranged and mixed by the same composer.</p>
+      <p class="lead ja">VTuberさん・歌い手さんのオリジナル曲やカバー用オケから、アニメ・ゲームのBGM・サウンドトラックまで。作曲・編曲・ミックスまで同じ作曲家が一貫して制作します。</p>
+      <p class="lead ko">버튜버 · 가수의 오리지널곡과 커버 반주부터 애니메이션 · 게임의 BGM · 사운드트랙까지. 작곡 · 편곡 · 믹싱을 한 작곡가가 끝까지 맡습니다.</p>
+      <div class="doors">
+        <a class="door" href="#creators">
+          <span class="label">For creators</span>
+          <span class="t"><span class="en">VTubers &amp; singers</span><span class="ja">VTuber・歌い手の方へ</span><span class="ko">버튜버 · 가수</span></span>
+          <span class="s"><span class="en">Debut and anniversary songs, character themes, backing tracks for covers.</span><span class="ja">デビュー曲・記念曲・キャラクターソング、歌ってみた用のオケ制作。</span><span class="ko">데뷔곡 · 기념곡 · 캐릭터 테마곡, 커버용 반주(오케) 제작.</span></span>
+          <span class="go">→ <span class="en">See what we make</span><span class="ja">サービスを見る</span><span class="ko">서비스 보기</span></span>
+        </a>
+        <a class="door" href="#studios">
+          <span class="label">For studios</span>
+          <span class="t"><span class="en">Animation &amp; games</span><span class="ja">アニメ・ゲーム制作会社の方へ</span><span class="ko">애니메이션 · 게임 제작사</span></span>
+          <span class="s"><span class="en">Scene-by-scene score, BGM with seamless loops, main themes and trailers.</span><span class="ja">シーンごとの劇伴、ループ対応BGM、メインテーマ、トレーラー音楽。</span><span class="ko">장면별 사운드트랙, 루프 BGM, 메인 테마, 트레일러 음악.</span></span>
+          <span class="go">→ <span class="en">See what we make</span><span class="ja">サービスを見る</span><span class="ko">서비스 보기</span></span>
+        </a>
       </div>
-      <div class="cta">
-        <a class="btn primary" href="#work"><span class="ko">작업물 듣기</span><span class="en">Listen to our work</span></a>
-        <a class="btn ko" href="V_VERS_Studio_Deck_KR.pdf" download>회사소개서 PDF 받기</a>
-        <a class="btn en" href="V_VERS_Studio_Deck_EN.pdf" download>Download deck (PDF)</a>
-        <a class="btn" href="#contact"><span class="ko">문의하기</span><span class="en">Get in touch</span></a>
+      <div class="proof">
+        <span><span class="label">Soundtrack</span>ORI — FrameFable × RaGEX Animation</span>
+        <span><span class="label">Documentary</span>CCC 2026 | Learn from the Front</span>
+        <span><span class="label">Credits</span>Producer Kailoe · Co-Producer Wheely Jung</span>
       </div>
-      <p class="credit">Producer Kailoe · Co-Producer Wheely Jung</p>
     </div>
   </section>
 
-  <section class="about">
+  <section id="work">
     <div class="wrap">
-      <p class="eyebrow">About</p>
-      <h2 class="ko" style="margin-top:14px">캐릭터와 세계관이 있는 프로젝트를 위한 음악 스튜디오</h2>
-      <h2 class="en" style="margin-top:14px;font-family:var(--f-display)">A music studio for projects with characters and worlds</h2>
-      <div class="pillars">
-        <div>
-          <h3><span class="ko">설정부터 이해합니다</span><span class="en">We learn the world first</span></h3>
-          <p class="ko">캐릭터 · 세계관 · 장면을 먼저 파악하고, 그 프로젝트에만 맞는 곡을 설계합니다.</p>
-          <p class="en">Characters, setting and scenes come first. Then we write music that fits only your project.</p>
-        </div>
-        <div>
-          <h3><span class="ko">작곡가가 끝까지</span><span class="en">One composer, start to finish</span></h3>
-          <p class="ko">작곡 · 편곡부터 믹싱 · 마스터링까지 직접 완성해 처음 의도한 소리 그대로 전달합니다.</p>
-          <p class="en">Composition, arrangement, mixing and mastering by the composer, so the sound stays as intended.</p>
-        </div>
-        <div>
-          <h3><span class="ko">국내외 협업</span><span class="en">Global collaboration</span></h3>
-          <p class="ko">국내외 보컬 · 크리에이터와 J-POP, K-POP, J-ROCK, 오케스트라까지 작업합니다.</p>
-          <p class="en">Work with vocalists and creators in and outside Korea, from J-Pop, K-Pop and J-Rock to orchestral.</p>
+      <div class="head">
+        <p class="label"><b>01</b> · Work</p>
+        <h2><span class="en">Selected projects</span><span class="ja">主な実績</span><span class="ko">작업 사례</span></h2>
+      </div>
+
+      <div class="feature">
+        <div class="media"><img src="ori-poster.jpg" alt="ORI — The Animated Series poster. Music by Kailoe." loading="lazy"></div>
+        <div class="meta">
+          <p class="label"><span class="en">Animation series</span><span class="ja">アニメーションシリーズ</span><span class="ko">해외 애니메이션 시리즈</span></p>
+          <h3><span class="en">Original soundtrack for ‘ORI’</span><span class="ja">『ORI』オリジナルサウンドトラック</span><span class="ko">애니메이션 ‘ORI’ 오리지널 사운드트랙</span></h3>
+          <dl class="sheet">
+            <dt><span class="en">Producer</span><span class="ja">制作</span><span class="ko">제작</span></dt><dd>FrameFable LLC</dd>
+            <dt><span class="en">Animation</span><span class="ja">アニメーション</span><span class="ko">애니메이션</span></dt><dd>RaGEX Animation</dd>
+            <dt><span class="en">Music</span><span class="ja">音楽</span><span class="ko">음악</span></dt><dd>Kailoe</dd>
+            <dt><span class="en">Release</span><span class="ja">公開</span><span class="ko">공개</span></dt><dd><span class="en">Trailer coming soon</span><span class="ja">トレーラー公開予定</span><span class="ko">트레일러 공개 예정</span></dd>
+          </dl>
         </div>
       </div>
+
+      <div class="feature">
+        <div class="media" data-yt="rxCN5vF_ZFA" data-title="CCC 2026 | Learn from the Front"></div>
+        <div class="meta">
+          <p class="label"><span class="en">Documentary</span><span class="ja">ドキュメンタリー</span><span class="ko">해외 다큐멘터리</span></p>
+          <h3><span class="en">A happy client, now discussing seven more tracks</span><span class="ja">仕上がりにご満足いただき、追加7曲を相談中</span><span class="ko">결과물에 만족한 의뢰처와 7곡 추가 작업을 논의하고 있습니다</span></h3>
+          <dl class="sheet">
+            <dt><span class="en">Film</span><span class="ja">作品</span><span class="ko">작품</span></dt><dd>CCC 2026 | Learn from the Front</dd>
+            <dt><span class="en">Client</span><span class="ja">依頼主</span><span class="ko">의뢰처</span></dt><dd><span class="en">Hans Troyer (trail running YouTube channel)</span><span class="ja">Hans Troyer（トレイルランニングYouTubeチャンネル）</span><span class="ko">Hans Troyer (트레일러닝 유튜브 채널)</span></dd>
+            <dt><span class="en">Scope</span><span class="ja">内容</span><span class="ko">작업</span></dt><dd><span class="en">BGM for a UTMB CCC race documentary</span><span class="ja">UTMB CCCレースのドキュメンタリーBGM</span><span class="ko">UTMB CCC 레이스 다큐멘터리 BGM</span></dd>
+            <dt><span class="en">Mood</span><span class="ja">雰囲気</span><span class="ko">분위기</span></dt><dd><span class="en">Hopeful, calm</span><span class="ja">希望、穏やか</span><span class="ko">희망, 차분함</span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="listen" class="paper">
+    <div class="wrap">
+      <div class="head">
+        <p class="label"><b>02</b> · Listen</p>
+        <h2><span class="en">Listen to our work</span><span class="ja">作品を聴く</span><span class="ko">작업물 듣기</span></h2>
+        <p class="lead"><span class="en">Tap any track to play it right here.</span><span class="ja">タップするとこのページで再生できます。</span><span class="ko">영상을 누르면 이 페이지에서 바로 재생됩니다.</span></p>
+      </div>
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" data-tab="orig" aria-selected="true"><span class="en">Original songs</span><span class="ja">オリジナル曲</span><span class="ko">오리지널곡</span></button>
+        <button type="button" role="tab" data-tab="bgm" aria-selected="false"><span class="en">BGM · Soundtrack</span><span class="ja">BGM・サウンドトラック</span><span class="ko">BGM · 사운드트랙</span></button>
+      </div>
+      <div class="grid" data-panel="orig">
+        <div class="track"><div class="media" data-yt="weV2dYgRcFU" data-title="고동"></div><span class="t">고동</span><span class="s">Feat. HEENA, SAKI, KAILRI · J-POP, J-ROCK</span></div>
+        <div class="track"><div class="media" data-yt="XYqeW2e-yQ8" data-title="ハートチャージ１００％"></div><span class="t">ハートチャージ１００％</span><span class="s">Feat. HEENA · J-POP, KAWAII POP</span></div>
+        <div class="track"><div class="media" data-yt="Rq8HzvNt5L8" data-title="홍잠"></div><span class="t">홍잠</span><span class="s">Feat. HEENA · K-POP</span></div>
+        <div class="track"><div class="media" data-yt="7z20UC2gpu8" data-title="U.N.I.Q.U.E"></div><span class="t">U.N.I.Q.U.E</span><span class="s">Feat. 유니, 初音ミク · J-POP</span></div>
+        <div class="track"><div class="media" data-yt="yz7-pPY4edU" data-title="My concerto"></div><span class="t">My concerto</span><span class="s">Feat. HEENA · J-POP</span></div>
+        <div class="track"><div class="media" data-yt="0_mrdNXsRO0" data-title="녹차는 살 안쪄!"></div><span class="t">녹차는 살 안쪄!</span><span class="s">Feat. SAKI, HEENA · J-POP, KAWAII POP</span></div>
+      </div>
+      <div class="grid" data-panel="bgm" hidden>
+        <div class="track"><div class="media" data-yt="rxCN5vF_ZFA" data-title="Learn from the Front"></div><span class="t">Learn from the Front</span><span class="s"><span class="en">CCC 2026 · Documentary BGM</span><span class="ja">CCC 2026・ドキュメンタリーBGM</span><span class="ko">CCC 2026 · 다큐멘터리 BGM</span></span></div>
+        <div class="track"><div class="media"><img src="ori-poster.jpg" alt="ORI" loading="lazy"></div><span class="t">ORI — Original Soundtrack</span><span class="s"><span class="en">Trailer coming soon</span><span class="ja">トレーラー公開予定</span><span class="ko">트레일러 공개 예정</span></span></div>
+        <div class="track"><div class="media" data-yt="HDqBRK_-ao0" data-title="Witch Parade"></div><span class="t">Witch Parade</span><span class="s"><span class="en">Halloween BGM · Orchestral</span><span class="ja">ハロウィンBGM・オーケストラ</span><span class="ko">할로윈 BGM · 오케스트라</span></span></div>
+        <div class="track"><div class="media" data-yt="aMxzp7mapd0" data-title="Noir Waltz"></div><span class="t">Noir Waltz</span><span class="s"><span class="en">Noir · Piano &amp; cello waltz</span><span class="ja">ノワール・ピアノとチェロのワルツ</span><span class="ko">느와르 · 피아노, 첼로 · 왈츠</span></span></div>
+      </div>
+      <p class="note"><span class="en">Tell us your genre and we’ll send samples that fit your project.</span><span class="ja">ご希望のジャンルを教えていただければ、プロジェクトに合うサンプルをお送りします。</span><span class="ko">원하시는 장르를 알려주시면 프로젝트에 맞는 샘플을 골라 보내드립니다.</span></p>
     </div>
   </section>
 
   <section id="services">
     <div class="wrap">
       <div class="head">
-        <p class="eyebrow">Services</p>
-        <h2 class="ko">프로젝트별로 이런 음악을 만듭니다</h2>
-        <h2 class="en">What we make, by project</h2>
+        <p class="label"><b>03</b> · Services</p>
+        <h2><span class="en">What we make</span><span class="ja">制作できるもの</span><span class="ko">이런 음악을 만듭니다</span></h2>
       </div>
-      <div class="cards">
-        <div class="card">
-          <span class="k">ANIMATION</span>
-          <span class="t"><span class="ko">애니메이션</span><span class="en">Animation</span></span>
-          <span class="s"><span class="ko">BGM · 사운드트랙</span><span class="en">BGM · Soundtrack</span></span>
-          <ul class="ko"><li>장면별 BGM · 사운드트랙</li><li>작품 전체를 한 톤으로 묶는 다곡 작업</li><li>트레일러 · 티저 음악</li></ul>
-          <ul class="en"><li>Scene-by-scene BGM and score cues</li><li>Multi-track work in one consistent voice</li><li>Trailer and teaser music</li></ul>
+      <div class="svc">
+        <div class="col" id="creators">
+          <p class="label">For creators</p>
+          <h3><span class="en">VTubers &amp; singers</span><span class="ja">VTuber・歌い手</span><span class="ko">버튜버 · 가수</span></h3>
+          <p class="who"><span class="en">Individual creators and VTuber agencies</span><span class="ja">個人勢・事務所所属どちらも</span><span class="ko">개인 · 소속사 모두</span></p>
+          <ul class="items">
+            <li><span><span class="en">Original song — debut, anniversary, character theme</span><span class="ja">オリジナル曲（デビュー曲・記念曲・キャラソン）</span><span class="ko">오리지널곡 (데뷔곡 · 기념곡 · 캐릭터 테마곡)</span></span><span>3–4 min</span></li>
+            <li><span><span class="en">Backing track for covers</span><span class="ja">歌ってみた用オケ（カバーアレンジ）</span><span class="ko">커버용 반주 (커버 어레인지)</span></span><span><span class="en">Piano / Band</span><span class="ja">ピアノ / バンド</span><span class="ko">피아노 / 밴드</span></span></li>
+            <li><span><span class="en">Stream BGM — opening, chatting, ending</span><span class="ja">配信BGM（待機・雑談・エンディング）</span><span class="ko">방송 BGM (대기 · 잡담 · 엔딩)</span></span><span>2–3 min</span></li>
+            <li><span><span class="en">Guide vocal, mixing and mastering</span><span class="ja">仮歌・ミックス・マスタリング</span><span class="ko">가이드 보컬 · 믹싱 · 마스터링</span></span><span><span class="en">Included</span><span class="ja">込み</span><span class="ko">포함</span></span></li>
+          </ul>
         </div>
-        <div class="card">
-          <span class="k">GAME</span>
-          <span class="t"><span class="ko">게임</span><span class="en">Games</span></span>
-          <span class="s"><span class="ko">BGM · 사운드트랙</span><span class="en">BGM · Soundtrack</span></span>
-          <ul class="ko"><li>필드 · 전투 · 메뉴 BGM</li><li>끊김 없는 루프 버전</li><li>메인 테마</li></ul>
-          <ul class="en"><li>Field, battle and menu BGM</li><li>Seamless loop versions</li><li>Main theme</li></ul>
+        <div class="col" id="studios">
+          <p class="label">For studios</p>
+          <h3><span class="en">Animation &amp; games</span><span class="ja">アニメ・ゲーム</span><span class="ko">애니메이션 · 게임</span></h3>
+          <p class="who"><span class="en">Studios, publishers and indie teams</span><span class="ja">制作会社・パブリッシャー・インディーチーム</span><span class="ko">제작사 · 퍼블리셔 · 인디 팀</span></p>
+          <ul class="items">
+            <li><span><span class="en">Scene-by-scene score and BGM</span><span class="ja">シーンごとの劇伴・BGM</span><span class="ko">장면별 사운드트랙 · BGM</span></span><span>2–3 min</span></li>
+            <li><span><span class="en">Game BGM with seamless loops</span><span class="ja">ループ対応のゲームBGM</span><span class="ko">끊김 없는 루프 게임 BGM</span></span><span><span class="en">Loop free</span><span class="ja">ループ無料</span><span class="ko">루프 무료</span></span></li>
+            <li><span><span class="en">Main theme, opening and ending songs</span><span class="ja">メインテーマ・OP/ED曲</span><span class="ko">메인 테마 · 오프닝 · 엔딩곡</span></span><span>3–4 min</span></li>
+            <li><span><span class="en">Trailer and teaser music</span><span class="ja">トレーラー・ティザー音楽</span><span class="ko">트레일러 · 티저 음악</span></span><span><span class="en">On request</span><span class="ja">要相談</span><span class="ko">별도 협의</span></span></li>
+          </ul>
         </div>
-        <div class="card hot">
-          <span class="k">ORIGINAL SONG</span>
-          <span class="t"><span class="ko">오리지널곡</span><span class="en">Original songs</span></span>
-          <span class="s"><span class="ko">버튜버 · 가수 · 작품 OST</span><span class="en">VTubers · Artists · OST</span></span>
-          <ul class="ko"><li>데뷔곡 · 기념곡 · 캐릭터 테마곡</li><li>작품 OST · 오프닝 · 엔딩 보컬곡</li><li>가이드 보컬부터 믹싱 · 마스터링까지</li></ul>
-          <ul class="en"><li>Debut, anniversary and character theme songs</li><li>OST, opening and ending vocal songs</li><li>Guide vocals through mix and master</li></ul>
-        </div>
+      </div>
+      <div class="why">
+        <div><h3><span class="en">We learn the world first</span><span class="ja">まず世界観を理解します</span><span class="ko">설정부터 이해합니다</span></h3><p><span class="en">Characters, setting and scenes come first. Then we write music that fits only your project.</span><span class="ja">キャラクター・設定・シーンを先に読み込み、その作品にしか合わない音楽を設計します。</span><span class="ko">캐릭터 · 세계관 · 장면을 먼저 파악하고, 그 프로젝트에만 맞는 곡을 설계합니다.</span></p></div>
+        <div><h3><span class="en">One composer, start to finish</span><span class="ja">一人の作曲家が最後まで</span><span class="ko">작곡가가 끝까지</span></h3><p><span class="en">Composition, arrangement, mixing and mastering by the composer, so the sound stays as intended.</span><span class="ja">作曲・編曲からミックス・マスタリングまで作曲家本人が仕上げるので、最初の意図がそのまま届きます。</span><span class="ko">작곡 · 편곡부터 믹싱 · 마스터링까지 직접 완성해 처음 의도한 소리 그대로 전달합니다.</span></p></div>
+        <div><h3><span class="en">J-Pop to orchestral</span><span class="ja">J-POPからオーケストラまで</span><span class="ko">J-POP부터 오케스트라까지</span></h3><p><span class="en">We work with vocalists and creators in and outside Korea, across J-Pop, K-Pop, J-Rock and orchestral.</span><span class="ja">国内外のボーカリスト・クリエイターと、J-POP、K-POP、J-ROCK、オーケストラまで制作しています。</span><span class="ko">국내외 보컬 · 크리에이터와 J-POP, K-POP, J-ROCK, 오케스트라까지 작업합니다.</span></p></div>
       </div>
     </div>
   </section>
 
-  <section class="cases" id="work">
+  <section id="process" class="paper">
     <div class="wrap">
       <div class="head">
-        <p class="eyebrow">Work</p>
-        <h2 class="ko">작업 사례</h2>
-        <h2 class="en">Case studies</h2>
-      </div>
-
-      <div class="case">
-        <div class="media"><img src="ori-poster.jpg" alt="ORI key visual — Original Soundtrack by Kailoe" loading="lazy"></div>
-        <div class="meta">
-          <span class="pill"><span class="ko">해외 애니메이션</span><span class="en">Animation</span></span>
-          <h3 class="ko">애니메이션 ‘ORI’ 오리지널 사운드트랙</h3>
-          <h3 class="en">Original soundtrack for the animation ‘ORI’</h3>
-          <dl class="ko"><dt>제작</dt><dd>FrameFable LLC</dd><dt>애니메이션</dt><dd>RaGEX Animation</dd><dt>참여</dt><dd>Original Soundtrack</dd><dt>공개</dt><dd>트레일러 공개 예정</dd></dl>
-          <dl class="en"><dt>Produced by</dt><dd>FrameFable LLC</dd><dt>Animation</dt><dd>RaGEX Animation</dd><dt>Our role</dt><dd>Original soundtrack</dd><dt>Release</dt><dd>Trailer coming soon</dd></dl>
-        </div>
-      </div>
-
-      <div class="case">
-        <div class="media" data-yt="rxCN5vF_ZFA" data-title="CCC 2026 | Learn from the Front"></div>
-        <div class="meta">
-          <span class="pill"><span class="ko">해외 다큐멘터리</span><span class="en">Documentary</span></span>
-          <h3 class="ko">결과물에 만족한 의뢰처와 7곡 추가 작업을 논의하고 있습니다</h3>
-          <h3 class="en">A happy client, now discussing seven more tracks</h3>
-          <dl class="ko"><dt>작품</dt><dd>CCC 2026 | Learn from the Front</dd><dt>의뢰처</dt><dd>Hans Troyer (트레일러닝 유튜브 채널)</dd><dt>작업</dt><dd>UTMB CCC 레이스 다큐멘터리 BGM</dd><dt>분위기</dt><dd>희망, 차분함</dd></dl>
-          <dl class="en"><dt>Film</dt><dd>CCC 2026 | Learn from the Front</dd><dt>Client</dt><dd>Hans Troyer (trail running YouTube channel)</dd><dt>Scope</dt><dd>BGM for a UTMB CCC race documentary</dd><dt>Mood</dt><dd>Hopeful, calm</dd></dl>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="listen">
-    <div class="wrap">
-      <div class="head">
-        <p class="eyebrow">Listen</p>
-        <h2 class="ko">작업물 듣기</h2>
-        <h2 class="en">Selected work</h2>
-        <p class="lead ko">영상을 누르면 이 페이지에서 바로 재생됩니다.</p>
-        <p class="lead en">Tap any track to play it right here.</p>
-      </div>
-      <div class="tabs" role="tablist">
-        <button type="button" role="tab" data-tab="orig" aria-selected="true"><span class="ko">오리지널곡</span><span class="en">Original songs</span></button>
-        <button type="button" role="tab" data-tab="bgm" aria-selected="false"><span class="ko">BGM · 사운드트랙</span><span class="en">BGM · Soundtrack</span></button>
-      </div>
-      <div class="grid" data-panel="orig">
-        <div class="track"><div class="media" data-yt="weV2dYgRcFU" data-title="고동"></div><span class="t">고동</span><span class="s">Feat. HEENA, SAKI, KAILRI · J-POP, J-ROCK</span></div>
-        <div class="track"><div class="media" data-yt="XYqeW2e-yQ8" data-title="ハートチャージ１００％"></div><span class="t">ハートチャージ１００％</span><span class="s">Feat. HEENA · J-POP, KAWAII POP</span></div>
-        <div class="track"><div class="media" data-yt="Rq8HzvNt5L8" data-title="홍잠"></div><span class="t">홍잠</span><span class="s">Feat. HEENA · K-POP</span></div>
-        <div class="track"><div class="media" data-yt="7z20UC2gpu8" data-title="U.N.I.Q.U.E"></div><span class="t">U.N.I.Q.U.E</span><span class="s">Feat. 유니, 하츠네 미쿠 · J-POP</span></div>
-        <div class="track"><div class="media" data-yt="yz7-pPY4edU" data-title="My concerto"></div><span class="t">My concerto</span><span class="s">Feat. HEENA · J-POP</span></div>
-        <div class="track"><div class="media" data-yt="0_mrdNXsRO0" data-title="녹차는 살 안쪄!"></div><span class="t">녹차는 살 안쪄!</span><span class="s">Feat. SAKI, HEENA · J-POP, KAWAII POP</span></div>
-      </div>
-      <div class="grid" data-panel="bgm" hidden>
-        <div class="track"><div class="media" data-yt="rxCN5vF_ZFA" data-title="Learn from the Front"></div><span class="t">Learn from the Front</span><span class="s"><span class="ko">CCC 2026 · 다큐멘터리 BGM</span><span class="en">CCC 2026 · Documentary BGM</span></span></div>
-        <div class="track"><div class="media"><img src="ori-poster.jpg" alt="ORI" loading="lazy"></div><span class="t">ORI — Original Soundtrack</span><span class="s"><span class="ko">트레일러 공개 예정</span><span class="en">Trailer coming soon</span></span></div>
-        <div class="track"><div class="media" data-yt="HDqBRK_-ao0" data-title="Witch Parade"></div><span class="t">Witch Parade</span><span class="s"><span class="ko">할로윈 BGM · 오케스트라</span><span class="en">Halloween BGM · Orchestral</span></span></div>
-        <div class="track"><div class="media" data-yt="aMxzp7mapd0" data-title="Noir Waltz"></div><span class="t">Noir Waltz</span><span class="s"><span class="ko">느와르 · 피아노, 첼로 · 왈츠</span><span class="en">Noir · Piano &amp; Cello Waltz</span></span></div>
-      </div>
-      <p class="note ko">원하시는 장르를 알려주시면 프로젝트에 맞는 샘플을 골라 보내드립니다.</p>
-      <p class="note en">Tell us your genre and we’ll send samples that fit your project.</p>
-    </div>
-  </section>
-
-  <section class="cases" id="process">
-    <div class="wrap">
-      <div class="head">
-        <p class="eyebrow">Process</p>
-        <h2 class="ko">기본 2주, 데모부터 함께 맞춰갑니다</h2>
-        <h2 class="en">Two weeks, shaped together from the first demo</h2>
+        <p class="label"><b>04</b> · Process</p>
+        <h2><span class="en">Two weeks, shaped together from the first demo</span><span class="ja">基本2週間。デモから一緒に仕上げます</span><span class="ko">기본 2주, 데모부터 함께 맞춰갑니다</span></h2>
       </div>
       <div class="steps">
-        <div class="step"><span class="n">01</span><b><span class="ko">문의</span><span class="en">Brief</span></b><span><span class="ko">장면 · 용도 · 레퍼런스 공유</span><span class="en">Scenes, use and references</span></span></div>
-        <div class="step"><span class="n">02</span><b><span class="ko">견적 · 일정</span><span class="en">Quote</span></b><span><span class="ko">수량과 마감 확정</span><span class="en">Scope and deadline agreed</span></span></div>
-        <div class="step"><span class="n">03</span><b><span class="ko">선금 50%</span><span class="en">50% deposit</span></b><span><span class="ko">결제 순으로 일정 확정</span><span class="en">Locks your slot</span></span></div>
-        <div class="step"><span class="n">04</span><b><span class="ko">데모</span><span class="en">Demo</span></b><span><span class="ko">방향을 담은 스케치 먼저</span><span class="en">A sketch of the direction</span></span></div>
-        <div class="step"><span class="n">05</span><b><span class="ko">수정 2회</span><span class="en">2 revisions</span></b><span><span class="ko">편곡 · 믹싱 · 마스터링</span><span class="en">Arrange, mix, master</span></span></div>
-        <div class="step last"><span class="n">06</span><b><span class="ko">납품</span><span class="en">Delivery</span></b><span><span class="ko">잔금 후 최종 파일 전달</span><span class="en">Final files after balance</span></span></div>
+        <div class="step"><span class="n">01</span><b><span class="en">Brief</span><span class="ja">ご相談</span><span class="ko">문의</span></b><span><span class="en">Scenes, use and references</span><span class="ja">シーン・用途・参考曲を共有</span><span class="ko">장면 · 용도 · 레퍼런스 공유</span></span></div>
+        <div class="step"><span class="n">02</span><b><span class="en">Quote</span><span class="ja">お見積もり</span><span class="ko">견적 · 일정</span></b><span><span class="en">Scope and deadline agreed</span><span class="ja">曲数と納期を確定</span><span class="ko">수량과 마감 확정</span></span></div>
+        <div class="step"><span class="n">03</span><b><span class="en">50% deposit</span><span class="ja">前金50%</span><span class="ko">선금 50%</span></b><span><span class="en">Locks your slot</span><span class="ja">お支払い順にスケジュール確定</span><span class="ko">결제 순으로 일정 확정</span></span></div>
+        <div class="step"><span class="n">04</span><b><span class="en">Demo</span><span class="ja">デモ</span><span class="ko">데모</span></b><span><span class="en">A sketch of the direction</span><span class="ja">方向性のスケッチを先に</span><span class="ko">방향을 담은 스케치 먼저</span></span></div>
+        <div class="step"><span class="n">05</span><b><span class="en">2 revisions</span><span class="ja">修正2回</span><span class="ko">수정 2회</span></b><span><span class="en">Arrange, mix, master</span><span class="ja">編曲・ミックス・マスタリング</span><span class="ko">편곡 · 믹싱 · 마스터링</span></span></div>
+        <div class="step"><span class="n">06</span><b><span class="en">Delivery</span><span class="ja">納品</span><span class="ko">납품</span></b><span><span class="en">Final files after balance</span><span class="ja">残金お支払い後に納品</span><span class="ko">잔금 후 최종 파일 전달</span></span></div>
       </div>
-      <p class="note ko">WAV (48kHz / 24bit) + MP3 · 리얼 세션 추가 시 최대 2주 · 외부 스튜디오 믹싱 추가 시 최대 5주 더 (둘 다 추가해도 최대 5주) · 계좌이체 · 카드 결제 가능</p>
-      <p class="note en">WAV (48kHz / 24bit) + MP3 · Live sessions add up to 2 weeks, external mixing up to 5 (up to 5 with both) · Bank transfer</p>
+      <p class="note"><span class="en">WAV (48 kHz / 24-bit) + MP3 · Live sessions add up to 2 weeks, external mixing up to 5 (up to 5 with both) · Bank transfer</span><span class="ja">WAV（48kHz / 24bit）+ MP3・生演奏セッション追加で最大2週間、外部スタジオでのミックス追加で最大5週間（両方でも最大5週間）・銀行振込</span><span class="ko">WAV (48kHz / 24bit) + MP3 · 리얼 세션 추가 시 최대 2주 · 외부 스튜디오 믹싱 추가 시 최대 5주 더 (둘 다 추가해도 최대 5주) · 계좌이체 · 카드 결제 가능</span></p>
     </div>
   </section>
 
   <section id="pricing">
     <div class="wrap">
       <div class="head">
-        <p class="eyebrow">Pricing</p>
-        <h2 class="ko">제작사 · 상업용 단가</h2>
-        <h2 class="en">One price, full commercial license</h2>
+        <p class="label"><b>05</b> · Pricing</p>
+        <h2><span class="en">Clear prices, full commercial license</span><span class="ja">わかりやすい料金、商用ライセンス込み</span><span class="ko">명확한 가격, 상업용 라이선스 포함</span></h2>
       </div>
       <div class="prices">
         <div>
-          <div class="price"><div><b>BGM</b><small class="ko">2~3분 · 루프 버전 무료</small><small class="en">2–3 min · loop version free</small></div><span class="v"><span class="ko">500,000원</span><span class="en">$450</span></span></div>
-          <div class="price"><div><b><span class="ko">오리지널곡</span><span class="en">Original song</span></b><small class="ko">3~4분 · 가이드 보컬 포함</small><small class="en">3–4 min · guide vocal included</small></div><span class="v"><span class="ko">1,200,000원</span><span class="en">$1,000</span></span></div>
+          <div class="price"><div><b>BGM</b><small><span class="en">2–3 min · loop version free</span><span class="ja">2〜3分・ループ版無料</span><span class="ko">2~3분 · 루프 버전 무료</span></small></div><span class="v">$450<small>USD</small></span></div>
+          <div class="price"><div><b><span class="en">Original song</span><span class="ja">オリジナル曲</span><span class="ko">오리지널곡</span></b><small><span class="en">3–4 min · guide vocal included</span><span class="ja">3〜4分・仮歌込み</span><span class="ko">3~4분 · 가이드 보컬 포함</span></small></div><span class="v">$1,000<small>USD</small></span></div>
         </div>
         <div>
-          <table class="ko">
-            <tr><th>추가 옵션</th><th></th></tr>
-            <tr><td>외부 스튜디오 믹싱 · 마스터링</td><td>+300,000원</td></tr>
-            <tr><td>리얼 세션 (기타 · 베이스 · 드럼, 악기당)</td><td>+150,000원</td></tr>
-            <tr><td>빠른 마감 (1주 이내)</td><td>곡 금액의 50%</td></tr>
-            <tr><td>1분 이내 짧은 곡</td><td>별도 협의</td></tr>
-          </table>
-          <table class="en">
-            <tr><th>Add-ons</th><th></th></tr>
-            <tr><td>External studio mix &amp; master</td><td>+$250</td></tr>
-            <tr><td>Live session (guitar, bass, drums, each)</td><td>+$120</td></tr>
-            <tr><td>Rush delivery (within 1 week)</td><td>+50%</td></tr>
-            <tr><td>Cues under 1 minute</td><td>On request</td></tr>
+          <table>
+            <tr><th><span class="en">Add-ons</span><span class="ja">オプション</span><span class="ko">추가 옵션</span></th><th></th></tr>
+            <tr><td><span class="en">External studio mix &amp; master</span><span class="ja">外部スタジオでのミックス・マスタリング</span><span class="ko">외부 스튜디오 믹싱 · 마스터링</span></td><td>+$250</td></tr>
+            <tr><td><span class="en">Live session (guitar, bass, drums, each)</span><span class="ja">生演奏セッション（ギター・ベース・ドラム、1楽器ごと）</span><span class="ko">리얼 세션 (기타 · 베이스 · 드럼, 악기당)</span></td><td>+$120</td></tr>
+            <tr><td><span class="en">Rush delivery (within 1 week)</span><span class="ja">特急納品（1週間以内）</span><span class="ko">빠른 마감 (1주 이내)</span></td><td>+50%</td></tr>
+            <tr><td><span class="en">Cover backing track</span><span class="ja">歌ってみた用オケ</span><span class="ko">커버용 반주</span></td><td><span class="en">On request</span><span class="ja">要相談</span><span class="ko">별도 협의</span></td></tr>
+            <tr><td><span class="en">Cues under 1 minute</span><span class="ja">1分未満の短い曲</span><span class="ko">1분 이내 짧은 곡</span></td><td><span class="en">On request</span><span class="ja">要相談</span><span class="ko">별도 협의</span></td></tr>
           </table>
         </div>
       </div>
-      <p class="note ko">상업용: 게임 · 애니메이션 · 광고 · 기업 콘텐츠, 의뢰처 독점 사용 · 여러 곡은 수량에 맞춰 견적 · 버튜버 개인 방송용은 별도 단가</p>
-      <p class="note en">Exclusive use in games, animation, film, ads and commercial content · Multi-track projects quoted by scope</p>
+      <div class="license">
+        <div><b><span class="en">What the price includes</span><span class="ja">料金に含まれるもの</span><span class="ko">가격에 포함된 것</span></b><p><span class="en">Exclusive use in games, animation, film, ads and commercial content. Two revisions. WAV and MP3.</span><span class="ja">ゲーム・アニメ・映像・広告・商用コンテンツでの独占使用、修正2回、WAV・MP3納品。</span><span class="ko">게임 · 애니메이션 · 영상 · 광고 · 상업 콘텐츠에서 의뢰처 독점 사용, 수정 2회, WAV · MP3 납품.</span></p></div>
+        <div><b><span class="en">Streaming-only use, multi-track projects</span><span class="ja">配信のみでの使用・複数曲のご依頼</span><span class="ko">방송용 · 여러 곡 작업</span></b><p><span class="en">Personal streaming use and multi-track projects are quoted by scope. Tell us what you need.</span><span class="ja">個人の配信のみでのご使用や複数曲のご依頼は、内容に合わせてお見積もりします。</span><span class="ko">개인 방송용 사용이나 여러 곡 작업은 내용에 맞춰 따로 견적을 드립니다.</span></p></div>
+      </div>
     </div>
   </section>
 
-  <section class="contact" id="contact">
+  <section id="contact" class="paper">
     <div class="wrap">
-      <p class="eyebrow">Contact</p>
-      <h2 class="ko" style="margin-top:14px">어떤 프로젝트인지 들려주세요</h2>
-      <h2 class="en" style="margin-top:14px;font-family:var(--f-display)">Tell us about your project</h2>
-      <p class="lead ko" style="margin-top:18px">장면 하나, 레퍼런스 곡 하나만 보내주셔도 방향을 먼저 제안드립니다.</p>
-      <p class="lead en" style="margin-top:18px">Send one scene or one reference track, and we’ll suggest a direction first.</p>
+      <div class="head">
+        <p class="label"><b>06</b> · Contact</p>
+        <h2><span class="en">Tell us about your project</span><span class="ja">プロジェクトについてお聞かせください</span><span class="ko">어떤 프로젝트인지 들려주세요</span></h2>
+        <p class="lead"><span class="en">Send one scene or one reference track, and we’ll suggest a direction first.</span><span class="ja">シーンひとつ、参考曲ひとつからでも大丈夫です。まず方向性をご提案します。やり取りは英語・日本語どちらでも可能です（日本語は翻訳を使用しています）。</span><span class="ko">장면 하나, 레퍼런스 곡 하나만 보내주셔도 방향을 먼저 제안드립니다.</span></p>
+      </div>
       <div class="contact-grid">
         <form class="inquiry" id="inquiry" novalidate>
           <div class="row2">
-            <label for="f-name"><span class="ko">이름 · 회사</span><span class="en">Name · Company</span>
+            <label for="f-name"><span class="en">Name · Company</span><span class="ja">お名前・団体名</span><span class="ko">이름 · 회사</span>
               <input id="f-name" name="name" required autocomplete="organization"></label>
-            <label for="f-email"><span class="ko">이메일</span><span class="en">Email</span>
+            <label for="f-email"><span class="en">Email</span><span class="ja">メールアドレス</span><span class="ko">이메일</span>
               <input id="f-email" name="email" type="email" required autocomplete="email"></label>
           </div>
           <fieldset>
-            <legend><span class="ko">어떤 프로젝트인가요?</span><span class="en">What is the project?</span></legend>
+            <legend><span class="en">What is the project?</span><span class="ja">ご依頼の内容</span><span class="ko">어떤 프로젝트인가요?</span></legend>
             <div class="chips">
-              <label><input type="radio" name="type" value="Animation" checked><span><span class="ko">애니메이션</span><span class="en">Animation</span></span></label>
-              <label><input type="radio" name="type" value="Game"><span><span class="ko">게임</span><span class="en">Game</span></span></label>
-              <label><input type="radio" name="type" value="VTuber"><span><span class="ko">버튜버</span><span class="en">VTuber</span></span></label>
-              <label><input type="radio" name="type" value="OST"><span>OST</span></label>
-              <label><input type="radio" name="type" value="Other"><span><span class="ko">기타</span><span class="en">Other</span></span></label>
+              <label><input type="radio" name="type" value="Original song" checked><span><span class="en">Original song</span><span class="ja">オリジナル曲</span><span class="ko">오리지널곡</span></span></label>
+              <label><input type="radio" name="type" value="Cover backing track"><span><span class="en">Cover backing track</span><span class="ja">歌ってみたオケ</span><span class="ko">커버 반주</span></span></label>
+              <label><input type="radio" name="type" value="Animation"><span><span class="en">Animation</span><span class="ja">アニメ</span><span class="ko">애니메이션</span></span></label>
+              <label><input type="radio" name="type" value="Game"><span><span class="en">Game</span><span class="ja">ゲーム</span><span class="ko">게임</span></span></label>
+              <label><input type="radio" name="type" value="Other"><span><span class="en">Other</span><span class="ja">その他</span><span class="ko">기타</span></span></label>
             </div>
           </fieldset>
           <div class="row2">
-            <label for="f-deadline"><span class="ko">희망 마감</span><span class="en">Deadline</span>
-              <input id="f-deadline" name="deadline" placeholder="2026-12 / 미정"></label>
-            <label for="f-ref"><span class="ko">레퍼런스 곡 (선택)</span><span class="en">Reference track (optional)</span>
+            <label for="f-deadline"><span class="en">Deadline</span><span class="ja">希望納期</span><span class="ko">희망 마감</span>
+              <input id="f-deadline" name="deadline" placeholder="2026-12 / TBD"></label>
+            <label for="f-ref"><span class="en">Reference track (optional)</span><span class="ja">参考曲（任意）</span><span class="ko">레퍼런스 곡 (선택)</span>
               <input id="f-ref" name="reference" placeholder="YouTube link"></label>
           </div>
-          <label for="f-msg"><span class="ko">내용</span><span class="en">Message</span>
+          <label for="f-msg"><span class="en">Message</span><span class="ja">ご相談内容</span><span class="ko">내용</span>
             <textarea id="f-msg" name="message" rows="5" required></textarea></label>
-          <button class="btn primary" type="submit" id="f-send"><span class="ko">문의 보내기</span><span class="en">Send inquiry</span></button>
+          <button class="btn primary" type="submit" id="f-send"><span class="en">Send inquiry</span><span class="ja">送信する</span><span class="ko">문의 보내기</span></button>
           <p class="f-status" id="f-status" role="status" aria-live="polite"></p>
         </form>
         <div class="ways">
-          <div class="way"><small><span class="ko">메일로 직접</span><span class="en">Email us directly</span></small><code id="mail">vvers.main@gmail.com</code><button class="copy" type="button" data-copy="vvers.main@gmail.com"><span class="ko">주소 복사</span><span class="en">Copy address</span></button></div>
-          <div class="way"><small>Instagram</small><a href="https://www.instagram.com/kailoe0125/" target="_blank" rel="noopener">@kailoe0125</a></div>
-          <div class="way"><small>X</small><a href="https://x.com/v__vers" target="_blank" rel="noopener">@v__vers</a></div>
+          <div class="way"><span class="label"><span class="en">Email us directly</span><span class="ja">メールで直接</span><span class="ko">메일로 직접</span></span><code id="mail">vvers.main@gmail.com</code><button class="copy" type="button" data-copy="vvers.main@gmail.com"><span class="en">Copy address</span><span class="ja">コピー</span><span class="ko">주소 복사</span></button></div>
+          <div class="way"><span class="label">X</span><a href="https://x.com/v__vers" target="_blank" rel="noopener">@v__vers</a></div>
+          <div class="way"><span class="label">Instagram</span><a href="https://www.instagram.com/kailoe0125/" target="_blank" rel="noopener">@kailoe0125</a></div>
           <a class="btn ko" href="V_VERS_Studio_Deck_KR.pdf" download>회사소개서 PDF 받기</a>
           <a class="btn en" href="V_VERS_Studio_Deck_EN.pdf" download>Download deck (PDF)</a>
+          <a class="btn ja" href="V_VERS_Studio_Deck_EN.pdf" download>資料をダウンロード（英語PDF）</a>
         </div>
       </div>
     </div>
@@ -453,7 +457,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 <script>
 (function(){
-  var root=document.documentElement;
+  var root=document.documentElement, LANGS=['en','ja','ko'];
   function setLang(l){
     root.setAttribute('data-lang',l); root.setAttribute('lang',l);
     document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.set===l));});
@@ -461,15 +465,15 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   }
   var q=new URLSearchParams(location.search).get('lang'), saved=null;
   try{saved=localStorage.getItem('vvers_lang');}catch(e){}
-  var nav=(navigator.language||'').toLowerCase().indexOf('ko')===0?'ko':'en';
-  setLang(q==='en'||q==='ko'?q:(saved||nav));
+  var nl=(navigator.language||'').toLowerCase(), nav=nl.indexOf('ko')===0?'ko':(nl.indexOf('ja')===0?'ja':'en');
+  setLang(LANGS.indexOf(q)>=0?q:(LANGS.indexOf(saved)>=0?saved:nav));
   document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.set);});});
 
   document.querySelectorAll('[data-yt]').forEach(function(m){
     var id=m.dataset.yt, t=m.dataset.title||'';
     var b=document.createElement('button'); b.type='button'; b.className='play';
     b.style.backgroundImage='url(https://i.ytimg.com/vi/'+id+'/hqdefault.jpg)';
-    b.setAttribute('aria-label',t+' ▶');
+    b.setAttribute('aria-label','Play '+t);
     b.addEventListener('click',function(){
       var f=document.createElement('iframe');
       f.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0';
@@ -487,20 +491,20 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   });
 
   var form=document.getElementById('inquiry'), st=document.getElementById('f-status'), send=document.getElementById('f-send');
-  function L(ko,en){return root.getAttribute('data-lang')==='en'?en:ko;}
+  function L(en,ja,ko){var l=root.getAttribute('data-lang');return l==='ja'?ja:(l==='ko'?ko:en);}
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var nameEl=document.getElementById('f-name'), name=nameEl.value.trim(), email=form.email.value.trim(), msg=form.message.value.trim();
     var bad=false;
     [[nameEl,!!name],[form.email,/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)],[form.message,!!msg]].forEach(function(p){p[0].setAttribute('aria-invalid',String(!p[1]));if(!p[1])bad=true;});
-    if(bad){st.className='f-status err';st.textContent=L('이름 · 이메일 · 내용을 확인해 주세요.','Please check your name, email and message.');return;}
+    if(bad){st.className='f-status err';st.textContent=L('Please check your name, email and message.','お名前・メールアドレス・ご相談内容をご確認ください。','이름 · 이메일 · 내용을 확인해 주세요.');return;}
     var type=(form.querySelector('input[name=type]:checked')||{}).value||'-';
     var payload={_subject:'[V_VERS Studio] '+type+' · '+name,name:name,email:email,'프로젝트 종류':type,'희망 마감':form.deadline.value.trim()||'-','레퍼런스':form.reference.value.trim()||'-',message:msg,'페이지 언어':root.getAttribute('data-lang')};
-    send.disabled=true; st.className='f-status'; st.textContent=L('보내는 중...','Sending...');
+    send.disabled=true; st.className='f-status'; st.textContent=L('Sending...','送信中...','보내는 중...');
     fetch('https://formspree.io/f/mrpeyqvr',{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify(payload)})
       .then(function(r){if(!r.ok)throw new Error(r.status);return r.json();})
-      .then(function(){form.reset();send.disabled=false;st.className='f-status ok';st.textContent=L('문의가 전달되었습니다. 확인 후 적어주신 이메일로 답장드릴게요.','Thanks! We’ll reply to the email you entered.');})
-      .catch(function(){send.disabled=false;st.className='f-status err';st.textContent=L('전송에 실패했어요. 잠시 후 다시 시도하시거나 vvers.main@gmail.com으로 직접 보내 주세요.','Sending failed. Please try again or email vvers.main@gmail.com directly.');});
+      .then(function(){form.reset();send.disabled=false;st.className='f-status ok';st.textContent=L('Thanks! We’ll reply to the email you entered.','送信しました。ご入力いただいたメールアドレスにご返信します。','문의가 전달되었습니다. 확인 후 적어주신 이메일로 답장드릴게요.');})
+      .catch(function(){send.disabled=false;st.className='f-status err';st.textContent=L('Sending failed. Please try again or email vvers.main@gmail.com directly.','送信できませんでした。時間をおいて再度お試しいただくか、vvers.main@gmail.com まで直接ご連絡ください。','전송에 실패했어요. 잠시 후 다시 시도하시거나 vvers.main@gmail.com으로 직접 보내 주세요.');});
   });
 
   document.querySelectorAll('[data-copy]').forEach(function(b){
