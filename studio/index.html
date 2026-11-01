@@ -34,7 +34,8 @@ html[data-lang="ko"]{--f-body:var(--f-ko)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
-html[data-lang="ko"] body,html[data-lang="ja"] body{word-break:keep-all;line-break:strict}
+html[data-lang="ko"] body{word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
+html[data-lang="ja"] body{line-break:strict;overflow-wrap:anywhere}
 a{color:inherit}
 img{max-width:100%;display:block}
 h1,h2,h3,p,ul,dl{margin:0}
@@ -141,7 +142,7 @@ table{width:100%;border-collapse:collapse;font-size:15px}
 th,td{padding:13px 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 td:last-child,th:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;padding-left:16px}
 th{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;border-bottom-color:var(--line-2)}
-.license{margin-top:40px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.license{margin-top:40px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .license div{background:var(--paper);border-radius:12px;padding:22px 24px;display:flex;flex-direction:column;gap:6px}
 .license b{font-size:16px}
 .license p{color:var(--soft);font-size:15px}
@@ -184,7 +185,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 @media (max-width:900px){
-  .feature,.prices,.contact-grid,.svc{grid-template-columns:1fr}
+  .feature,.prices,.contact-grid,.svc,.license{grid-template-columns:minmax(0,1fr)}
   .feature{gap:28px}
   .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .steps{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -330,7 +331,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
           <p class="who"><span class="en">Individual creators and VTuber agencies</span><span class="ja">個人勢・事務所所属どちらも</span><span class="ko">개인 · 소속사 모두</span></p>
           <ul class="items">
             <li><span><span class="en">Original song — debut, anniversary, character theme</span><span class="ja">オリジナル曲（デビュー曲・記念曲・キャラソン）</span><span class="ko">오리지널곡 (데뷔곡 · 기념곡 · 캐릭터 테마곡)</span></span><span>3–4 min</span></li>
-            <li><span><span class="en">Backing track for covers</span><span class="ja">歌ってみた用オケ（カバーアレンジ）</span><span class="ko">커버용 반주 (커버 어레인지)</span></span><span><span class="en">Piano / Band</span><span class="ja">ピアノ / バンド</span><span class="ko">피아노 / 밴드</span></span></li>
+            <li><span><span class="en">Backing track for covers</span><span class="ja">歌ってみた用オケ（カバーアレンジ）</span><span class="ko">커버용 반주 (커버 어레인지)</span></span><span><span class="en">Piano, band, orchestra · any genre</span><span class="ja">ピアノ・バンド・オーケストラなど全ジャンル</span><span class="ko">피아노 · 밴드 · 오케스트라 등 모든 장르</span></span></li>
             <li><span><span class="en">Stream BGM — opening, chatting, ending</span><span class="ja">配信BGM（待機・雑談・エンディング）</span><span class="ko">방송 BGM (대기 · 잡담 · 엔딩)</span></span><span>2–3 min</span></li>
             <li><span><span class="en">Guide vocal, mixing and mastering</span><span class="ja">仮歌・ミックス・マスタリング</span><span class="ko">가이드 보컬 · 믹싱 · 마스터링</span></span><span><span class="en">Included</span><span class="ja">込み</span><span class="ko">포함</span></span></li>
           </ul>
@@ -369,7 +370,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <div class="step"><span class="n">05</span><b><span class="en">2 revisions</span><span class="ja">修正2回</span><span class="ko">수정 2회</span></b><span><span class="en">Arrange, mix, master</span><span class="ja">編曲・ミックス・マスタリング</span><span class="ko">편곡 · 믹싱 · 마스터링</span></span></div>
         <div class="step"><span class="n">06</span><b><span class="en">Delivery</span><span class="ja">納品</span><span class="ko">납품</span></b><span><span class="en">Final files after balance</span><span class="ja">残金お支払い後に納品</span><span class="ko">잔금 후 최종 파일 전달</span></span></div>
       </div>
-      <p class="note"><span class="en">WAV (48 kHz / 24-bit) + MP3 · Live sessions add up to 2 weeks, external mixing up to 5 (up to 5 with both) · Bank transfer</span><span class="ja">WAV（48kHz / 24bit）+ MP3・生演奏セッション追加で最大2週間、外部スタジオでのミックス追加で最大5週間（両方でも最大5週間）・銀行振込</span><span class="ko">WAV (48kHz / 24bit) + MP3 · 리얼 세션 추가 시 최대 2주 · 외부 스튜디오 믹싱 추가 시 최대 5주 더 (둘 다 추가해도 최대 5주) · 계좌이체 · 카드 결제 가능</span></p>
+      <p class="note"><span class="en">WAV (48 kHz / 24-bit) + MP3 · Live sessions add up to 2 weeks, external mixing up to 5 (up to 5 with both) · Bank transfer · PayPal</span><span class="ja">WAV（48kHz / 24bit）+ MP3・生演奏セッション追加で最大2週間、外部スタジオでのミックス追加で最大5週間（両方でも最大5週間）・銀行振込・PayPal</span><span class="ko">WAV (48kHz / 24bit) + MP3 · 리얼 세션 추가 시 최대 2주 · 외부 스튜디오 믹싱 추가 시 최대 5주 더 (둘 다 추가해도 최대 5주) · 계좌이체 · 카드 결제(국내) · PayPal</span></p>
     </div>
   </section>
 
@@ -381,8 +382,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       </div>
       <div class="prices">
         <div>
-          <div class="price"><div><b>BGM</b><small><span class="en">2–3 min · loop version free</span><span class="ja">2〜3分・ループ版無料</span><span class="ko">2~3분 · 루프 버전 무료</span></small></div><span class="v">$450<small>USD</small></span></div>
-          <div class="price"><div><b><span class="en">Original song</span><span class="ja">オリジナル曲</span><span class="ko">오리지널곡</span></b><small><span class="en">3–4 min · guide vocal included</span><span class="ja">3〜4分・仮歌込み</span><span class="ko">3~4분 · 가이드 보컬 포함</span></small></div><span class="v">$1,000<small>USD</small></span></div>
+          <div class="price"><div><b>BGM</b><small><span class="en">2–3 min · loop version free</span><span class="ja">2〜3分・ループ版無料</span><span class="ko">2~3분 · 루프 버전 무료</span></small></div><span class="v">$400<small>USD</small></span></div>
+          <div class="price"><div><b><span class="en">Original song</span><span class="ja">オリジナル曲</span><span class="ko">오리지널곡</span></b><small><span class="en">3–4 min · guide vocal included</span><span class="ja">3〜4分・仮歌込み</span><span class="ko">3~4분 · 가이드 보컬 포함</span></small></div><span class="v">$1,200<small>USD</small></span></div>
+          <div class="price"><div><b><span class="en">Cover backing track</span><span class="ja">歌ってみた用オケ</span><span class="ko">커버 편곡 Inst</span></b><small><span class="en">Piano, band, orchestra · any genre</span><span class="ja">ピアノ・バンド・オーケストラなど全ジャンル</span><span class="ko">피아노 · 밴드 · 오케스트라 등 모든 장르</span></small></div><span class="v">$300<small><span class="en">USD+</span><span class="ja">USD〜</span><span class="ko">USD부터</span></small></span></div>
         </div>
         <div>
           <table>
@@ -390,14 +392,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
             <tr><td><span class="en">External studio mix &amp; master</span><span class="ja">外部スタジオでのミックス・マスタリング</span><span class="ko">외부 스튜디오 믹싱 · 마스터링</span></td><td>+$250</td></tr>
             <tr><td><span class="en">Live session (guitar, bass, drums, each)</span><span class="ja">生演奏セッション（ギター・ベース・ドラム、1楽器ごと）</span><span class="ko">리얼 세션 (기타 · 베이스 · 드럼, 악기당)</span></td><td>+$120</td></tr>
             <tr><td><span class="en">Rush delivery (within 1 week)</span><span class="ja">特急納品（1週間以内）</span><span class="ko">빠른 마감 (1주 이내)</span></td><td>+50%</td></tr>
-            <tr><td><span class="en">Cover backing track</span><span class="ja">歌ってみた用オケ</span><span class="ko">커버용 반주</span></td><td><span class="en">On request</span><span class="ja">要相談</span><span class="ko">별도 협의</span></td></tr>
             <tr><td><span class="en">Cues under 1 minute</span><span class="ja">1分未満の短い曲</span><span class="ko">1분 이내 짧은 곡</span></td><td><span class="en">On request</span><span class="ja">要相談</span><span class="ko">별도 협의</span></td></tr>
           </table>
         </div>
       </div>
       <div class="license">
         <div><b><span class="en">What the price includes</span><span class="ja">料金に含まれるもの</span><span class="ko">가격에 포함된 것</span></b><p><span class="en">Exclusive use in games, animation, film, ads and commercial content. Two revisions. WAV and MP3.</span><span class="ja">ゲーム・アニメ・映像・広告・商用コンテンツでの独占使用、修正2回、WAV・MP3納品。</span><span class="ko">게임 · 애니메이션 · 영상 · 광고 · 상업 콘텐츠에서 의뢰처 독점 사용, 수정 2회, WAV · MP3 납품.</span></p></div>
-        <div><b><span class="en">Streaming-only use, multi-track projects</span><span class="ja">配信のみでの使用・複数曲のご依頼</span><span class="ko">방송용 · 여러 곡 작업</span></b><p><span class="en">Personal streaming use and multi-track projects are quoted by scope. Tell us what you need.</span><span class="ja">個人の配信のみでのご使用や複数曲のご依頼は、内容に合わせてお見積もりします。</span><span class="ko">개인 방송용 사용이나 여러 곡 작업은 내용에 맞춰 따로 견적을 드립니다.</span></p></div>
+        <div><b><span class="en">Same price for creators and companies</span><span class="ja">個人・法人とも同じ料金</span><span class="ko">개인 · 회사 같은 가격</span></b><p><span class="en">Individual creators and companies pay the same price. Projects with several tracks are quoted by scope.</span><span class="ja">個人のクリエイター様も法人様も同じ料金で承ります。複数曲のご依頼は、内容に合わせてお見積もりします。</span><span class="ko">개인 크리에이터와 회사 모두 같은 가격으로 진행합니다. 여러 곡 작업은 내용에 맞춰 따로 견적을 드립니다.</span></p></div>
+        <div><b><span class="en">Cover backing tracks</span><span class="ja">歌ってみた用オケについて</span><span class="ko">커버 편곡 Inst</span></b><p><span class="en">Made for cover videos and streams. The original song’s copyright stays with its owner, so a release needs the rights holder’s permission.</span><span class="ja">歌ってみた動画・配信用の制作です。原曲の著作権は原作者にあるため、音源リリースなどには権利者の許諾が必要です。</span><span class="ko">커버 영상 업로드와 방송 사용을 위한 제작입니다. 원곡의 저작권은 원작자에게 있어, 음원 발매 등은 원곡 권리자의 허락이 필요합니다.</span></p></div>
       </div>
     </div>
   </section>
@@ -442,9 +444,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
           <div class="way"><span class="label"><span class="en">Email us directly</span><span class="ja">メールで直接</span><span class="ko">메일로 직접</span></span><code id="mail">vvers.main@gmail.com</code><button class="copy" type="button" data-copy="vvers.main@gmail.com"><span class="en">Copy address</span><span class="ja">コピー</span><span class="ko">주소 복사</span></button></div>
           <div class="way"><span class="label">X</span><a href="https://x.com/v__vers" target="_blank" rel="noopener">@v__vers</a></div>
           <div class="way"><span class="label">Instagram</span><a href="https://www.instagram.com/kailoe0125/" target="_blank" rel="noopener">@kailoe0125</a></div>
-          <a class="btn ko" href="V_VERS_Studio_Deck_KR.pdf" download>회사소개서 PDF 받기</a>
-          <a class="btn en" href="V_VERS_Studio_Deck_EN.pdf" download>Download deck (PDF)</a>
-          <a class="btn ja" href="V_VERS_Studio_Deck_EN.pdf" download>資料をダウンロード（英語PDF）</a>
         </div>
       </div>
     </div>
