@@ -429,6 +429,17 @@ section{border-bottom:0}
   .kv-home{background:var(--bg)}
   .offer{margin-top:24px}
 }
+/* audio portfolio card */
+.vv-audio{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:14px 16px;background:#0C1424;color:#fff;font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace}
+.vv-audio .vv-top{display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.vv-audio .vv-wave{flex:1;display:flex;align-items:center;gap:2px;margin:10px 0;cursor:pointer;min-height:0}
+.vv-audio .vv-wave i{flex:1;min-width:1px;border-radius:2px;background:rgba(255,255,255,.26);transition:background .15s}
+.vv-audio .vv-wave i.on{background:#9DB4FF}
+.vv-audio .vv-bot{display:flex;align-items:center;gap:12px}
+.vv-audio button{flex:none;width:44px;height:44px;border-radius:50%;border:0;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.vv-audio button svg{width:18px;height:18px;fill:#0C1424}
+.vv-audio button:focus-visible{outline:2px solid #9DB4FF;outline-offset:3px}
+.vv-audio .vv-time{font-size:12px;color:rgba(255,255,255,.7);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -714,8 +725,9 @@ section{border-bottom:0}
     bgm: [
       { title: 'Learn from the Front', sub: 'CCC 2026 · COROS · 희망, 차분 · 다큐멘터리', youtube: 'https://youtu.be/rxCN5vF_ZFA' },
       { title: 'ORI', sub: 'Original Soundtrack · FrameFable × RageX Animation · 애니메이션 시리즈', youtube: '', image: 'ori-poster.jpg' },
-      { title: 'Witch Parade', sub: '할로윈 BGM · 오케스트라', youtube: 'https://youtu.be/HDqBRK_-ao0' },
-      { title: 'Noir Waltz', sub: '느와르 · 피아노, 첼로 · 왈츠', youtube: 'https://youtu.be/aMxzp7mapd0' }
+      { title: 'Erotomania', sub: '한국애니메이션고 24기 졸업작품 · BGM', youtube: 'https://youtu.be/t6BLTOmiIDg' },
+      { title: 'Witch Parade', sub: '할로윈 BGM · 오케스트라', youtube: '', audio: 'audio/witch-parade.mp3', peaks: '24,30,31,30,30,38,38,42,44,46,36,46,36,48,55,56,57,49,48,45,64,54,53,50,64,78,80,87,89,84,84,86,93,86,64,46,54,54,67,60,35,80,96,100,94,87,91,100,68,57,48,32,62,31,37,12' },
+      { title: 'Noir Waltz', sub: '느와르 · 피아노, 첼로 · 왈츠', youtube: '', audio: 'audio/noir-waltz.mp3', peaks: '64,64,72,84,74,83,84,74,74,80,78,88,93,83,86,89,83,81,85,81,82,74,72,87,82,81,89,90,94,100,94,60,88,83,84,86,88,79,78,85,77,79,85,80,85,82,76,81,86,84,92,23,14,13,12,12' }
     ]
   };
   // ==========================================================================
@@ -724,6 +736,28 @@ section{border-bottom:0}
     if (!u) return '';
     var m = String(u).match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([A-Za-z0-9_-]{11})/);
     return m ? m[1] : (/^[A-Za-z0-9_-]{11}$/.test(u) ? u : '');
+  }
+  // ===== audio portfolio card (mp3, no video) =====
+  function vvAudio(box, src, title, peaks){
+    var P='<svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>', S='<svg viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>';
+    var c=document.createElement('div'); c.className='vv-audio';
+    c.innerHTML='<div class="vv-top"><span>Audio</span><span class="vv-dur"></span></div><div class="vv-wave" role="slider" aria-label="'+title+' seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0"></div><div class="vv-bot"><button type="button" aria-label="Play '+title+'">'+P+'</button><span class="vv-time">0:00</span></div>';
+    var w=c.querySelector('.vv-wave'), b=c.querySelector('button'), tm=c.querySelector('.vv-time'), du=c.querySelector('.vv-dur');
+    var bars=String(peaks).split(',').map(function(v){var i=document.createElement('i');i.style.height=v+'%';w.appendChild(i);return i;});
+    var a=new Audio(); a.preload='metadata'; a.src=src;
+    function f(s){s=Math.max(0,Math.floor(s||0));return Math.floor(s/60)+':'+('0'+s%60).slice(-2);}
+    function draw(){var r=a.duration?a.currentTime/a.duration:0,n=Math.round(r*bars.length);bars.forEach(function(x,k){x.classList.toggle('on',k<n);});tm.textContent=f(a.currentTime);w.setAttribute('aria-valuenow',Math.round(r*100));}
+    a.addEventListener('loadedmetadata',function(){du.textContent=f(a.duration);});
+    a.addEventListener('timeupdate',draw);
+    a.addEventListener('play',function(){(window.__vvA||[]).forEach(function(o){if(o!==a)o.pause();});b.innerHTML=S;b.setAttribute('aria-label','Pause '+title);});
+    a.addEventListener('pause',function(){b.innerHTML=P;b.setAttribute('aria-label','Play '+title);});
+    a.addEventListener('ended',function(){a.currentTime=0;draw();});
+    (window.__vvA=window.__vvA||[]).push(a);
+    b.addEventListener('click',function(){a.paused?a.play():a.pause();});
+    function seek(r){if(!a.duration){a.play();return;}a.currentTime=Math.min(.999,Math.max(0,r))*a.duration;draw();if(a.paused)a.play();}
+    w.addEventListener('click',function(e){var R=w.getBoundingClientRect();seek((e.clientX-R.left)/R.width);});
+    w.addEventListener('keydown',function(e){if(!a.duration)return;if(e.key==='ArrowRight'){a.currentTime=Math.min(a.duration,a.currentTime+5);draw();}else if(e.key==='ArrowLeft'){a.currentTime=Math.max(0,a.currentTime-5);draw();}});
+    box.innerHTML=''; box.appendChild(c);
   }
   var grid = document.querySelector('[data-pf-grid]');
   function show(kind){
@@ -748,6 +782,8 @@ section{border-bottom:0}
           media.innerHTML = ''; media.appendChild(f);
         });
         media.appendChild(btn);
+      } else if (item.audio){
+        vvAudio(media, item.audio, item.title, item.peaks);
       } else if (item.image){
         var im = document.createElement('img'); im.src = item.image; im.alt = item.title; im.loading = 'lazy';
         im.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover';
